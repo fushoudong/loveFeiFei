@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>表单</title>
+    </head>
+    <body>
+        <fieldset>
+            <legend>type</legend>
+            <form
+                action=""
+                enctype="multipart/form-data"
+                method="POST"
+                target="_blank">
+                <p>
+                    text:
+                    <input 
+                        type='text' 
+                        name='text' 
+                        value='基础文本' 
+                        size='10'
+                        maxlength='15'/>
+                </p>
+                <p>
+                    password:
+                    <input 
+                        type='password' 
+                        name='password' 
+                        value='密码文本' 
+                        size='10'
+                        maxlength='15'/>
+                </p>
+                <p>
+                    radio:
+                    <input 
+                        type='radio' 
+                        name='radio' 
+                        value='man'
+                        checked/>
+                        男
+                    <input 
+                        type='radio' 
+                        name='radio' 
+                        value='woman'/>
+                        女
+                </p>
+                <p>
+                    checkbox:
+                    <input 
+                        type='checkbox' 
+                        name='checkbox' 
+                        value='man'
+                        checked/>
+                        男
+                    <input 
+                        type='checkbox' 
+                        name='checkbox' 
+                        value='woman'/>
+                        女
+                </p>
+                <p>
+                    button:
+                    <input 
+                        type="button" 
+                        value="点击显示"
+                        onclick="alert('我爱斐斐')"/>
+                </p>
+                <p>
+                    <input 
+                        type="submit" 
+                        name="submit"
+                        value="提交"/>
+                    <input 
+                        type="reset" 
+                        name="reset"
+                        value="重置"/>
+                        
+                </p>
+                <p>
+                    datalist:
+                    <input list='books'>
+                    <datalist id="books">
+                        <option value="java"></option>
+                        <option value="css"></option>
+                        <option value="html"></option>
+                    </datalist>
+                </p>
+                <p>
+                    select:
+                    <select>
+                        <option value="value1">value1</option>
+                        <option value="value2">value2</option>
+                        <option value="value3">value3</option>
+                        <option value="value4">value4</option>
+                    </select>
+                </p>
+            </form>
+            
+        </fieldset>
+    </body>
+</html>
+<style>
+    fieldset{
+        width: fit-content;
+    }
+</style>
