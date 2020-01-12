@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>视觉差</title>
+        <style>
+            /* 可以使用CSS实现视觉差网页 */
+            .div1{
+                background-image: url(../../image/1.jpg);
+                background-attachment: fixed;
+                height: 1000px;
+                width: 1920px;
+            }
+            .div2{
+                background-image: url(../../image/2.jpg);
+                background-attachment: fixed;
+                height: 1000px;
+                width: 1920px;
+            }
+            .div3{
+                background-image: url(../../image/3.jpg);
+                background-attachment: fixed;
+                height: 1000px;
+                width: 1920px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div1">
+            <form
+                action=""
+                method="POST"
+                enctype="application/x-www-form-urlencoded">
+                <tbody>
+                    <table 
+                        width='400'
+                        height='300'
+                        border="yes" 
+                        cellspaning='1'>
+                        <caption>表单表格组合</caption>
+                        <tr>
+                            <td align="center" rowspan="4" width='100'>总体信息</td>
+                            <td align="center" colspan="2">用户注册</td>
+                        </tr>
+                        <tr>
+                            <td align="center" width='100'>用户名：</td>
+                            <td align="center" width='200'>
+                                <input type="text" placeholder="请输入姓名"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" width='100'>密码：</td>
+                            <td align="center" width='200'>
+                                <input type="text" placeholder="请输入密码"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="3">
+                                <center>
+                                    <input type="submit" name="submit" value="提交"/>
+                                    <span>&emsp;&emsp;</span>
+                                    <input type="reset" name="reset" value="重置"/>
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                </tbody>
+            </form>
+        </div>
+        <div class="div2">
+            <h1>好美味小吃</h1>
+            <ul type="disc">
+                <li>
+                    小吃类
+                    <ul type='circle'>
+                        <li>第一项</li>
+                        <li>第二项</li>
+                        <li>第三项</li>
+                    </ul>
+                </li>
+                <li>
+                    卤味类
+                    <ul type='circle'>
+                        <li>第一项</li>
+                        <li>第二项</li>
+                        <li>第三项</li>
+                    </ul>
+                </li>
+                <li>
+                    套餐类
+                    <ul type='circle'>
+                        <li>第一项</li>
+                        <li>第二项</li>
+                        <li>第三项</li>
+                    </ul>
+                </li>
+            </ul>
+            <em>
+                亲，20元以上可送餐哦！
+            </em>
+        </div>
+        <div class="div3">
+            <fieldset>
+                <legend>type</legend>
+                <form
+                    action=""
+                    enctype="multipart/form-data"
+                    method="POST"
+                    target="_blank">
+                    <p>
+                        text:
+                        <input 
+                            type='text' 
+                            name='text' 
+                            value='基础文本' 
+                            size='10'
+                            maxlength='15'/>
+                    </p>
+                    <p>
+                        password:
+                        <input 
+                            type='password' 
+                            name='password' 
+                            value='密码文本' 
+                            size='10'
+                            maxlength='15'/>
+                    </p>
+                    <p>
+                        radio:
+                        <input 
+                            type='radio' 
+                            name='radio' 
+                            value='man'
+                            checked/>
+                            男
+                        <input 
+                            type='radio' 
+                            name='radio' 
+                            value='woman'/>
+                            女
+                    </p>
+                    <p>
+                        checkbox:
+                        <input 
+                            type='checkbox' 
+                            name='checkbox' 
+                            value='man'
+                            checked/>
+                            男
+                        <input 
+                            type='checkbox' 
+                            name='checkbox' 
+                            value='woman'/>
+                            女
+                    </p>
+                    <p>
+                        button:
+                        <input 
+                            type="button" 
+                            value="点击显示"
+                            onclick="alert('我爱斐斐')"/>
+                    </p>
+                    <p>
+                        <input 
+                            type="submit" 
+                            name="submit"
+                            value="提交"/>
+                        <input 
+                            type="reset" 
+                            name="reset"
+                            value="重置"/>
+                    </p>
+                    <p>
+                        file:
+                        <input 
+                            type='file'
+                            name="file"
+                            size='10'
+                            maxlength='15'/>
+                    </p>
+                    <p>
+                        datalist:
+                        <input list='books'>
+                        <datalist id="books">
+                            <option value="java"></option>
+                            <option value="css"></option>
+                            <option value="html"></option>
+                        </datalist>
+                    </p>
+                    <p>
+                        select:
+                        <select>
+                            <option value="" selected disabled>请选择</option>
+                            <option value="value1">value1</option>
+                            <option value="value2">value2</option>
+                            <option value="value3" selected>value3</option>
+                            <option value="value4">value4</option>
+                        </select>
+                    </p>
+                    <p>
+                        textarea:
+                        <textarea name="textarea" cols="30" rows="10">
+                        </textarea>
+                    </p>
+                    <p>
+                        label：
+                        <input type="radio" name="gender" id="man"/>
+                        <label for="man">男</label>
+                        <input type="radio" name="gender" id="woman"/>
+                        <label for="woman">女</label>
+                    </p>
+                </form>
+                
+            </fieldset>
+        </div>
+        <!--过程中div随着拖动发生改变，背景图片不会改变-->
+    </body>
+</html>

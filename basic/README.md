@@ -53,3 +53,11 @@ HTML常见标签：http://www.html5star.com/manual/html5label-meaning/
 - 快捷键：
 - - 行注释：ctrl + / 
 - - 插入注释：shift + alt + a
+
+### 寒假进度
+> 2020-01-12：第一天
+>> 完成视频教程 part24——part41<br>
+>>> 上午：整理表单相关内容(视频进度：part23)<br>
+>>> 下午：表单、div、span、css(视频进度：part30)<br>
+>>> 晚上：(视频进度part41)
+> 2020-01-13：第二天

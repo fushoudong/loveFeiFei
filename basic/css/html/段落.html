@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>文字与段落</title>
+        <style>
+            div {
+                overflow: hidden;
+                height: fit-content;
+                width: fit-content;
+            }
+            fieldset {
+                float: left;
+                width: 600px;
+                margin-left: 10px;
+                border: 1px solid lightskyblue;
+            }
+            .family {
+                font-family: '华文新魏';
+            }
+            .style {
+                font-style: italic;
+            }
+            .weight {
+                font-weight: 700;
+            }
+            .size {
+                font-size: 30px;
+            }
+            .color {
+                color: red;
+            }
+            .indent {
+                text-indent: 2em;
+            }
+            .spacing {
+                letter-spacing: 15px;
+                word-spacing: 3px;
+            }
+            .decoration {
+                text-decoration: line-through overline underline;
+            }
+            .transform {
+                text-transform: capitalize;
+            }
+            .align {
+                text-align: justify;
+            }
+            .line {
+                line-height: 30px;
+            }
+            .wordBreak {
+                width: 100px;
+                word-wrap: break-word;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <fieldset>
+                <legend>字体样式</legend>
+                <p>font-family:<span class="family">family</span></p>
+                <p>font-style:<span class="style">style</span></p>
+                <p>font-weight:<span class="weight">weight</span></p>
+                <p>font-size:<span class="size">size</span></p>
+                <p>color:<span class="color">color</span></p>
+            </fieldset>
+            <fieldset>
+                <legend>文章段落练习</legend>
+                <p>text-indent：<span class="indent">段落缩进</span></p>
+                <p>spacing：<span class="spacing">spacing测试段落</span></p>
+                <p>text-decoration：<span class="decoration">文章段落修饰</span></p>
+                <p>text-transform：<span class="transform">I will love FeiFei forever.</span></p>
+                <p>text-align：<span class="align">文本对齐</span></p>
+                <p>line-height：<span class="line">行高</span></p>
+                <div class='wordBreak'>
+                    Hasas kmasc apo pod ,safmv aj jac zxifas,c/.apo,dasdasdsd,mfoerf,opfs afmkw sd,as;d,safmnie s,das'daspov wevc
+                </div>
+            </fieldset>
+        </div>
+    </body>
+</html>

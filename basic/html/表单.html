@@ -74,7 +74,14 @@
                         type="reset" 
                         name="reset"
                         value="重置"/>
-                        
+                </p>
+                <p>
+                    file:
+                    <input 
+                        type='file'
+                        name="file"
+                        size='10'
+                        maxlength='15'/>
                 </p>
                 <p>
                     datalist:
@@ -88,11 +95,24 @@
                 <p>
                     select:
                     <select>
+                        <option value="" selected disabled>请选择</option>
                         <option value="value1">value1</option>
                         <option value="value2">value2</option>
-                        <option value="value3">value3</option>
+                        <option value="value3" selected>value3</option>
                         <option value="value4">value4</option>
                     </select>
+                </p>
+                <p>
+                    textarea:
+                    <textarea name="textarea" cols="30" rows="10">
+                    </textarea>
+                </p>
+                <p>
+                    label：
+                    <input type="radio" name="gender" id="man"/>
+                    <label for="man">男</label>
+                    <input type="radio" name="gender" id="woman"/>
+                    <label for="woman">女</label>
                 </p>
             </form>
             
