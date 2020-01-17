@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>浮动的练习</title>
+    </head>
+    <style>
+        #main {
+            margin: 10px auto;
+            width: 365px;
+            height: fit-content;
+            background-color: cadetblue;
+        }
+        #main:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        h2,p{
+            margin: 0px;
+            font-size: 14px;
+        }
+        #title {
+            width: 365px;
+            background: url(../../image/bg_title.png) no-repeat 10px 5px,url(../../image/bg_line.png) repeat-x;
+            font-size: 12px;
+            padding-left: 30px;
+            height: 23px;
+            line-height: 23px;
+            display: block;
+            margin: 3px 0px;
+            box-sizing: border-box;
+        }
+        ul {
+            display: block;
+            margin-top: 0px;
+            padding-left: 0px;
+        }
+        ul li{
+            list-style: none;
+            height: 76px;
+        }
+        .liLeft{
+            float: left;
+            padding-top: 7px;
+            padding-left: 5px;
+        }
+        .liRight {
+            width: 240px;
+            margin-left: 10px;
+            float: left;
+        }
+        a {
+            text-decoration: none;
+            color: gray;
+        }
+    </style>
+    <body>
+        <div id="main">
+            <h2 id="title">
+                外媒评论精选
+            </h2>
+            <ul>
+                <li>
+                    <div class="liLeft">
+                        <a href='#'>
+                            <img src="../../image/img.png"/>
+                        </a>
+                    </div>
+                    <div class="liRight">
+                        <h2>标题</h2>
+                        <div>这是内容这是内容这是内容这是内容这是内容这是内容
+                            这是内容这是内容这是内容这是内容...<a href="#">[详细]</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </body>
+</html>

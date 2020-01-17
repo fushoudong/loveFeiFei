@@ -59,5 +59,11 @@ HTML常见标签：http://www.html5star.com/manual/html5label-meaning/
 >> 完成视频教程 part24——part41<br>
 >>> 上午：整理表单相关内容(视频进度：part23)<br>
 >>> 下午：表单、div、span、css(视频进度：part30)<br>
->>> 晚上：(视频进度part41)
-> 2020-01-13：第二天
+>>> 晚上：(视频进度part41)<br>
+
+> 2020-01-14：第二天
+>> 傍晚(17:00-23:00)<br>
+>> 视频教程至part51
+
+> 2020-01-15：第三天
+>> 视频教程至part81

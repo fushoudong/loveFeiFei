@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>盒子模型</title>
+        <style>
+            .div{
+                width: 300px;
+                height: 300px;
+                border: 10px solid blue;
+                background-color: aquamarine;
+                padding: 20px;
+                margin: 30px;
+            }
+            .box{
+                width: 300px;
+                height: 300px;
+                background: lightblue;
+            }
+            .out{
+                width: 300px;
+                height: 300px;
+                background-color: yellow;
+            }
+            .in {
+                width: 100%;
+                height: 100px;
+                background-color: aqua;
+                border-left: 10px solid red;
+                padding-left: 30px;
+            }
+            .d1{
+                width: 906px;
+                height: 906px;
+                border:1px solid black;
+                padding: 100px;
+                box-sizing: border-box;
+            }
+            .d2{
+                padding: 70px;
+                border: 2px gray dashed;
+            }
+            .d3{
+                padding: 30px;
+                background-color: white;
+                border: solid lightskyblue 10px;
+            }
+            .d4{
+                padding: 70px;
+                background-color: plum;
+                border: double white 1px;
+            }
+            .d5{
+                padding: 70px;
+                background-color: plum;
+                border: double white 3px;
+            }
+            .d6{
+                width: 200px;
+                height: 200px;
+                background-color: greenyellow;
+                border: 10px yellow solid;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div class="div">
+            这是一个盒子
+        </div>
+        <div class="box">4
+            只是只有内容的盒子
+        </div> -->
+        <!-- <div class="out">
+            <div class="in">
+                嵌套盒子
+            </div>
+        </div> -->
+        <div class="d1">
+            <div class="d2">
+                <div class="d3">
+                    <div class="d4">
+                        <div class="d5">
+                            <div class="d6">
+                                我喜欢史一斐
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

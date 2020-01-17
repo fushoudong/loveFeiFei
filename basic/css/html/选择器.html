@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>选择器</title>
+        <style>
+            ul li{border: solid sienna 1px;}
+            .ol > li{border: solid red 1px;}
+            div + h2 {
+                background-color: aliceblue;
+            }
+            div[class]{color: yellow;}
+            a {display: block; color: black;}
+            a:link{background-color: aqua;}
+            a:visited{background-color: gray;}
+            a:hover{background-color: violet;}
+            a:active{background-color: thistle;}
+            div:after{content: 'feifei'; color: #FF0000;}
+            div::before{content:'FSD';color: aquamarine;}
+            :focus{background: orange;}
+            :checked{color: #FF0000; }
+            :disabled{color: darkturquoise;}
+            li:nth-child(2n+1){
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <ul><li><ul><li></li></ul></li></ul>
+        <ol class="ol"><li><ol><li></li><li></li></ol></li></ol>
+        <h2>
+            love u u
+        </h2>
+        <div>
+            hahah
+        </div>
+        <h2>
+            love u u
+        </h2>
+        <h2>
+            love u u
+        </h2>
+        <div class="ha">
+            ha hah
+        </div>
+        伪类选择器 -->
+        <a href="#">将故事写成我们</a>
+        <div> love </div>
+        <input type="text" />
+        <input type='radio' name='radio' id="man">
+        <label for="man">男</label>
+        <input type='radio' name='radio' id="woman">
+        <label for="woman">女</label>
+        <input type='radio' name='radio' id="dis" disabled>
+        <label for="dis">禁</label>
+    </body>
+    <!-- 结构伪类选择器 -->
+    <ol>
+        <li></li>
+        <div> love </div>
+        <li></li>
+        <li></li>
+        <div> love </div>
+        <li></li>
+        <li></li>
+    </ol>
+</html>

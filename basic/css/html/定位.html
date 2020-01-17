@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>定位</title>
+        <style>
+            body{
+                margin: 0px;
+                padding: 0px;
+                height: 2000px;
+            }
+            /* 
+              相对定位
+                1. 不脱离文档流  
+                2. 如果没有偏移量不发生变化
+                3. 不会对其他元素产生影响
+                4. left/right/top/bottom相对于自身
+             */
+            /* .box1{width: 100px; height: 100px; background: red;position: relative;left:20px; bottom: -133px;}
+            .box2{width: 100px; height: 100px; background: yellow;position: relative; left: 100px; top: 100px;}
+            .box3{width: 100px; height: 100px; background: blue;} */
+            /*
+              绝对定位：
+                1. 脱离文档流
+                2. 使内联元素支持宽高
+                3. 使块状元素默认宽根据内容决定
+                4. 如果父类元素有定位，则子元素绝对定位由父类决定，否则为相对于文档定位
+             */
+             /* .box4{
+                 width: 100px;
+                 height: 100px;
+                 position: absolute;
+                 background: red;
+             }
+             .box5{
+                 width: 200px;
+                 height: 200px;
+                 position: absolute;
+                 background: yellow;
+                 left: 100px;
+             }
+             .box6{
+                 position:absolute;
+                 top: 100px;
+                 left: 20px;
+                 background-color: aqua;
+             }
+             span{
+                 position: absolute;
+                 width: 100px;
+                 height: 100px;
+                 background: cornflowerblue;
+             } */
+             /* div{
+                 position: sticky;
+                 top: 0;
+                 background: red;
+             } */
+             .div1{
+                 border: 1px solid black;
+                 height: 100px;
+                 width: 100px;
+                 position: absolute;
+                 z-index: 3;
+             }
+             .content{
+                 height: 100px;
+                 width: 100px;
+                 background: red;
+                 z-index: 0;
+                 top: 30px;
+                 left: 30px;
+                 position: absolute;
+             }
+             .div2{
+                 height: 100px;
+                 width: 100px;
+                 background: blue;
+                 z-index: 2;
+                 position: absolute;
+             }
+        </style>
+    </head>
+    <body>
+        <!-- <div class="box1">
+            
+        </div>
+        <div class="box2">
+
+        </div>
+        <div class="box3">
+
+        </div> -->
+        <!-- <div class="box4">
+            
+        </div>
+        <div class="box5">
+
+        </div>
+        <div class="box6">
+            说好要忘记
+        </div>
+        <span>
+            内联元素1
+        </span> -->
+        <!-- <div style="margin: 200px; height: 300px; width: 300px; border: black 1px solid; position: fixed;">
+            <div style="width: 100px; height: 100px; background: cyan; position: absolute; left: 100px; top: 100px;">
+                内部块状元素
+            </div>
+        </div> -->
+        <!-- <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <p>aaaaa</p>
+        <div>sticky</div>
+        <p>bbbbbb</p>
+        <p>bbbbbb</p>
+        <p>bbbbbb</p>
+        <p>bbbbbb</p>
+        <p>bbbbbb</p>
+        <p>bbbbbb</p> -->
+        <div class="div1">
+            <div class="content">
+
+            </div>
+        </div>
+        <div class="div2">
+
+        </div>
+    </body>
+</html>

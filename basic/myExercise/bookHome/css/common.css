@@ -1,0 +1,36 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    font-family: Arial;
+}
+a {
+    text-decoration: none;
+}
+h2 {
+    background: url(../image/title_bg.png) no-repeat 0 7px;
+    text-align: center;
+    width: 345px;
+    font-size: 20px;
+    font-weight: 100;
+}
+ul {
+    padding: 0px;
+}
+.head_menu li {
+    font-size: 14px;
+    float: left;
+    margin-left: 58px;
+    list-style: none;
+    line-height: 49px;
+
+}
+.head_menu li a {
+    color: #646464;
+}
+.l {
+    float: left;
+}
+.r {
+    float: right;
+}
