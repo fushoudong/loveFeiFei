@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>选择器</title>
+        <style>
+            #idS{
+                color: red;
+            }
+            .classS{
+                color: green;
+            }
+            .classSize{
+                font:bold italic 18px/2em '楷体';
+            }
+            div[class][id]{
+                background: greenyellow;
+            }
+            .content{
+                color: red;
+            }
+            .content::before{
+                content: '付寿东';
+                font-size: 14px;
+                color: blue;
+                font-family: '华文新魏';
+            }
+            .content::after {
+                content: '史一斐';
+                font-size: 14px;
+                color: pink;
+                font-size: '黑体';
+            }
+            .type li:nth-of-type(2n) {
+                background-color: blanchedalmond;
+            }
+            .child li:nth-child(2n){
+                background-color: burlywood;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div>none</div>
+        <div id="idS" class="classSize">none</div>
+        <div class="classS">none</div>
+        <div class="">none</div>
+        <div class="content"> love </div>
+        <ol class="type">
+            <li></li>
+            <li></li>
+            <li></li>
+            <div>hhh</div>
+            <div>h</div>
+            <li></li>
+            <li></li>
+            <div>hh</div>
+            <li></li>
+        </ol>
+        <hr>
+        <ol class="child">
+            <li></li>
+            <li></li>
+            <li></li>
+            <div>hhh</div>
+            <div>h</div>
+            <li></li>
+            <li></li>
+            <div>hh</div>
+            <li></li>
+        </ol>
+    </body>
+</html>

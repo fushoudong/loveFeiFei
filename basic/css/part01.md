@@ -40,8 +40,8 @@
 3. 外部链接
 ```
     <link ref='stylesheet' href='css.css' type='text/css'>
-    rel：引入外部资源的类型
-    href：外部资源的地址
+        rel：引入外部资源的类型
+        href：外部资源的地址
 ```
 4. 外部导入
 ```
@@ -225,7 +225,7 @@ eg:(复合写法通过空格实现)
 ```
     CSS:
         div{}          
-    HTML:
+    HTML: 
         <div></div>
     使用的场景：
         1. 去掉某些标签的默认样式时
@@ -259,7 +259,7 @@ eg:(复合写法通过空格实现)
     *= : 部分匹配(eg:div[class*='ha']:适用于所有class包含ha的div标签)
     ^= : 起始匹配(eg:div[class^='ha']:适用于所有class以ha开始的div标签)
     $= : 结束匹配(eg:div[class$='ha']:适用于所有class以ha结束的div标签)
-    [][][] : 组合匹配(eg:div[class][id]:适用于包含class和id的div标签)
+    [][][] : 组合匹配(eg:div[class][id]:适用于包含class和id的div标签,均包含)
 ```
 8. 伪类选择器
 ```
@@ -477,6 +477,7 @@ eg:(复合写法通过空格实现)
             4. 所占的区域不一定是矩形
             5. 内联标签之间会有空隙，原因：换行产生的
             6. img支持宽高
+            7. 默认的span之间存在间隔，去除可以使用设置父标签字体0px，span重新设置字体大小
 
         inline-block : input、select ...
             1. 挨在一起，但是支持宽高

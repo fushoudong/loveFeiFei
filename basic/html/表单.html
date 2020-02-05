@@ -33,16 +33,24 @@
                 <p>
                     radio:
                     <input 
+                        id="man"
                         type='radio' 
                         name='radio' 
                         value='man'
                         checked/>
-                        男
+                        <label
+                            for="man">
+                            男
+                        </label>
                     <input 
+                        id="woman"
                         type='radio' 
                         name='radio' 
                         value='woman'/>
-                        女
+                        <label 
+                            for="woman">
+                            女
+                        </label>
                 </p>
                 <p>
                     checkbox:
@@ -85,11 +93,12 @@
                 </p>
                 <p>
                     datalist:
-                    <input list='books'>
-                    <datalist id="books">
-                        <option value="java"></option>
-                        <option value="css"></option>
-                        <option value="html"></option>
+                    <input list="data">
+                    <datalist id="data">
+                        <option>生生</option>
+                        <option>可惜没如果</option>
+                        <option>裂缝中的阳光</option>
+                        <option>stay with you</option>
                     </datalist>
                 </p>
                 <p>

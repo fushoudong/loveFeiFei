@@ -3,38 +3,65 @@
     <head>
         <meta charset="UTF-8">
         <title>表格</title>
+        <style>
+            div{
+                border: 1px #FF00FF solid;
+                float: left;
+                height: fit-content;
+                width: fit-content;
+            }
+            body::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+        </style>
     </head>
     <body>
-        <table
-            border="2"
-            cellspacing='0'
-            cellpadding='2'
-            bordercolor='#0000FF'>
-            <caption>天气预报</caption>
-            <thead>
-                <tr>
-                    <th>日期</th>
-                    <th>天气</th>
-                    <th>出行状况</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1月1日</td>
-                    <td>晴</td>
-                    <td>适合出行</td>
-                </tr>
-                <tr>
-                    <td>1月2日</td>
-                    <td>阴转小雨</td>
-                    <td>不适外出</td>
-                </tr>
-            </tbody>
-            <tfoot>
-
-            </tfoot>
-        </table
-
-        >
+        <div>
+            <fieldset>
+                <legend>新加表格</legend>
+                <table
+                    border="1"
+                    bordercolor='#FF0000'
+                    cellspacing=0>
+                    <caption>成绩单</caption>
+                    <thead>
+                        <tr>
+                            <th width='80'>姓名</th>
+                            <th width='80'>高数</th>
+                            <th width='80'>线代</th>
+                            <th width='80'>数据库</th>
+                            <th width='80'>总分</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td align="center">90</td>
+                            <td align="center">90</td>
+                            <td align="center">90</td>
+                            <td align="center">90</td>
+                            <td align="center">360</td>
+                        </tr>
+                        <tr>
+                            <td align="center">90</td>
+                            <td align="center">90</td>
+                            <td align="center">90</td>
+                            <td align="center">90</td>
+                            <td align="center">360</td>
+                        </tr>
+                        <tr>
+                            <td align="center">90</td>
+                            <td align="center">90</td>
+                            <td align="center">90</td>
+                            <td align="center">90</td>
+                            <td align="center">360</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    </tfoot>
+                </table>
+            </fieldset>
+        </div>
     </body>
 </html>

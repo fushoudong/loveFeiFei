@@ -16,9 +16,9 @@
                 3. 不会对其他元素产生影响
                 4. left/right/top/bottom相对于自身
              */
-            /* .box1{width: 100px; height: 100px; background: red;position: relative;left:20px; bottom: -133px;}
+            /* .box1{width: 100px; height: 100px; background: red;position: relative;left:20px; top: 3px;}
             .box2{width: 100px; height: 100px; background: yellow;position: relative; left: 100px; top: 100px;}
-            .box3{width: 100px; height: 100px; background: blue;} */
+            .box3{width: 100px; height: 100px; background: blue; position: relative; top: -100px;} */
             /*
               绝对定位：
                 1. 脱离文档流
@@ -26,7 +26,7 @@
                 3. 使块状元素默认宽根据内容决定
                 4. 如果父类元素有定位，则子元素绝对定位由父类决定，否则为相对于文档定位
              */
-             /* .box4{
+             .box4{
                  width: 100px;
                  height: 100px;
                  position: absolute;
@@ -49,8 +49,9 @@
                  position: absolute;
                  width: 100px;
                  height: 100px;
+                 left: 50px;
                  background: cornflowerblue;
-             } */
+             }
              /* div{
                  position: sticky;
                  top: 0;
@@ -91,18 +92,21 @@
         <div class="box3">
 
         </div> -->
-        <!-- <div class="box4">
+        <div style="top: 100px; position: absolute; width: 300px; height: 300px;">
+            <div class="box4">
             
+            </div>
+            <div class="box5">
+    
+            </div>
+            <div class="box6">
+                说好要忘记
+            </div>
+            <span>
+                内联元素1
+            </span>
         </div>
-        <div class="box5">
-
-        </div>
-        <div class="box6">
-            说好要忘记
-        </div>
-        <span>
-            内联元素1
-        </span> -->
+        
         <!-- <div style="margin: 200px; height: 300px; width: 300px; border: black 1px solid; position: fixed;">
             <div style="width: 100px; height: 100px; background: cyan; position: absolute; left: 100px; top: 100px;">
                 内部块状元素
@@ -121,13 +125,13 @@
         <p>bbbbbb</p>
         <p>bbbbbb</p>
         <p>bbbbbb</p> -->
-        <div class="div1">
+        <!-- <div class="div1">
             <div class="content">
 
             </div>
         </div>
         <div class="div2">
 
-        </div>
+        </div> -->
     </body>
 </html>

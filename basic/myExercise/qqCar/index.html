@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>QQ飞车首页</title>
+        <link rel="stylesheet" href="./css/common.css" type="text/css">
+        <style>
+            #header{
+                width: 980px;
+                height: 41px;
+                margin: 0px auto;
+                color: black;
+            }
+            .container {
+                width: 220px;
+                height: 100%;
+                background: url(./images/ost-bg.png) no-repeat 0px -37px;
+            }
+            .ad {
+                width: 240px;
+                height: 100%;
+                background: url(./images/ad.jpg) no-repeat 10px 0px;
+            }
+            .header_menu {
+                width: 219px;
+            }
+            .header_menu div{
+                
+                float: left;
+            }
+            .header_menu div a{
+                line-height: 41px;
+                color: black;
+                font-size: 12px;
+            }
+            .menu_left {
+                background: url(./images/ost-bg.png) no-repeat;
+                background-position: 0px -80px;
+            }
+            .menu_right {
+                background: url(./images/ost-bg.png) no-repeat;
+                background-position: -185px -76px;
+            }
+            .leftLink {
+                margin-right: 20px;
+                padding-left: 20px;
+            }
+            .rightLink {
+                margin-left: 0px;
+                padding-right: 20px;
+                
+            }
+            #main{
+                width: 100%;
+                height: 900px;
+                background-size: 100%;
+                background: url(./images/bg20190104.jpg) no-repeat;
+            }
+            .nav {
+                width: 100%;
+                height: 236px;
+                background: url(./images/nav.png) no-repeat;
+            }
+            .nav dd a:hover {
+                color: red;
+                text-decoration: underline;
+            }
+            .containerNav{
+                width: 980px;
+                height: 236px;
+                margin: 0px auto;
+                position: relative;
+            }
+            .logo {
+                width: 138px;
+                height: 112px;
+                margin: 0px auto;
+                background: url(./images/inside_logo.png);
+            }
+            .home{
+                width: 65px;
+                height: 66px;
+                position: absolute;
+                top: 0px;
+            }
+            .home a {
+                display: block;
+                width: 100%;
+                height: 66px;
+                color: transparent;
+            }
+            .resource{
+                position: absolute;
+                width: 69px;
+                height: 201px;
+                top: 0px;
+                left: 98px;
+            }
+            .game {
+                position: absolute;
+                max-height: 201px;
+                width: 69px;
+                top: 0px;
+                left: 205px;
+            }
+            .activity {
+                position: absolute;
+                max-height: 201px;
+                width: 69px;
+                top: 0px;
+                left: 324px;
+            }
+            .resource dt a,.activity dt a,.game dt a{
+                display: block;
+                width: 100%;
+                height: 66px;
+                color: transparent;
+            }
+            .resource dd, .game dd,.activity dd{
+                position: relative;
+            }
+            .resource dd a,.game dd a, .activity dd a{
+                display: block;
+                width: 100%;
+                height: 27px;
+                color: white;
+                line-height: 27px;
+                font-size: 12px;
+                text-align: center;
+            }
+            .hot {
+                display: block;
+            }
+            .hot::after {
+                display: block;
+                content: '';
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                background: url(./images/nav_tips.png) no-repeat 0px -12px;
+                top: 6px;
+                right: -5px;
+            }
+            .new {
+                display: block;
+            }
+            .new::after {
+                display: block;
+                content: '';
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                background: url(./images/nav_tips.png) no-repeat 0px 0px;
+                top: 6px;
+                right: -5px;
+            }
+            .link {
+                width: 980px;
+                height: 175px;
+                margin: 0 auto;
+            }
+            .link a {
+                display: block;
+                width: 463px;
+                height: 175px;
+                margin: 0px auto;
+            }
+            .banner {
+                width: 990px;
+                max-height: 300px;
+                margin: 0px auto;
+                background: url(./images/top.png) no-repeat 10px 20px;
+            }
+            .banner::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .banner_left {
+                width: 240px;
+                height: 310px;
+                margin-left: 20px;
+                background: url(./images/down_user_spr.png);
+                float: left;
+            }
+            .banner_main {
+                position: relative;
+                width: 501px;
+                height: 266px;
+                float: left;
+                margin:22px 1px;
+            }
+            .banner_right {
+                width: 209px;
+                height: 255px;
+                float: left;
+                margin: 35px 8px;
+                background: url(./images/bebae86c3d1f64d50a53434ed5458d22-80.jpg);
+                border-radius: 10px;
+            }
+            .top {
+                width: 236px;
+                height: 130px;
+            }
+            .bottom {
+                width: 230px;
+                height: 175px;
+                margin-left: 5px;
+            }
+            .img {
+                width: 56px;
+                height: 56px;
+                margin: 0px auto;
+                border-radius: 33px;
+                border: 5px blueviolet solid;
+                margin-top: 30px;
+            }
+            .img img {
+                display: block;
+                border-radius: 28px;
+            }
+            .bottom p {
+                color: white;
+                font-size: 12px;
+                margin-top: 20px;
+                text-align: center;
+            }
+            .download {
+                width: 240px;
+                height: 50px;
+                margin: 40px auto;
+                text-align: center;
+            }
+            .download p:first-child {
+                font-weight: bold;
+                font-size: 20px;
+            }
+            .download p:last-child {
+                font-weight: normal;
+                font-size: 16px;
+            }
+            .main_banner {
+                margin-top: 10px;
+                border-radius: 10px;
+            }
+            .main_banner img{
+                border-radius: 20px;
+                width: 100%;
+                height: 260px;
+            }
+            .main_banner li:nth-child(1){
+                display: block;
+            }
+            .main_banner li:nth-child(2){
+                display: none;
+            }
+            .main_banner li:nth-child(3){
+                display: none;
+            }
+            .main_banner li a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .main_button{
+                position: absolute;
+                width: fit-content;
+                height: 20px;
+                left: 212px;
+                bottom: 1px;
+            }
+            .main_button {
+                display: inline-block;
+            }
+            .main_button li {
+                opacity: 1;
+                display: block;
+                float: left;
+                margin-left: 10px;
+                width: 14px;
+                height: 14px;
+                border: 3px white solid;
+                border-radius: 18px;
+                box-sizing: border-box;
+            }
+            .main_button li:nth-of-type(1) {
+                background-color: orange;
+                
+            }
+            .main_button li a {
+                display: block;
+                width: 18px;
+                height: 18px;
+                border-radius: 18px;
+            }
+            .button_row {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                height: 30px;
+                border-top: 1px lightblue solid;
+                background-color: rgba(0,0,0,.5);
+                border-radius: 0px 0px 15px 15px ;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header" class="container-fluid">
+            <div class="container l">
+            </div>
+            <div class="ad l">
+
+            </div>
+            <div class="header_menu r">
+                <div class="menu_left">
+                    <a class="leftLink" href="#">
+                        成长守护平台
+                    </a>
+                </div>
+                <div class="menu_right">
+                    <a class="rightLink" href="#">
+                        腾讯游戏排行榜
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="main" class="container-fluid">
+            <div class="nav">
+                <div class="containerNav">
+                    <div class="logo">
+                    </div>
+                    <dl class="home">
+                        <dt>
+                            <a href="#">
+                                首页
+                            </a>
+                        </dt>
+                        <dd>
+
+                        </dd>
+                    </dl>
+                    <dl class="resource">
+                        <dt>
+                            <a href="#">
+                                我爱史一斐
+                            </a>
+                        </dt>
+                        <dd><a href="#">新手指导</a></dd>
+                        <dd><a class="hot" href="#">官方漫画</a></dd>
+                        <dd><a class="new" href="#">飞车手游</a></dd>
+                        <dd><a href="#">精美壁纸</a></dd>
+                        <dd><a href="#">游戏下载</a></dd>
+                    </dl>
+                    <dl class="game">
+                        <dt><a href="#">wo</a></dt>
+                        <dd><a class="hot" href="#">SSC</a></dd>
+                        <dd><a href="#">谁是车王</a></dd>
+                        <dd><a href="#">全民争霸赛</a></dd>
+                    </dl>
+                    <dl class="activity">
+                        <dt><a href="#">wo</a></dt>
+                        <dd><a class="hot" href="#">版本专区</a></dd>
+                        <dd><a href="#">合作专区</a></dd>
+                        <dd><a href="#">CDK兑换</a></dd>
+                    </dl>
+                </div>
+                
+            </div>
+            <div class="link">
+                <a href="#"></a>
+            </div>
+            <div class="banner">
+                <div class="banner_left">
+                    <div class="top">
+                        <div class="download">
+                            <p>
+                                下载游戏
+                            </p>
+                            <p>
+                                download
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="img">
+                            <img src="./images/56x56.jpg" alt="QQ飞车首页logo" title="QQ飞车首页logo" />
+                        </div>
+                        <p>
+                            欢迎
+                            <a style="color: #34f1d0;">登录</a>
+                            ，进入飞车的世界
+                        </p>
+                    </div>
+                </div>
+                <div class="banner_main">
+                    <ul class="main_banner">
+                        <li>
+                            <a href="#">
+                                <img src="http://ossweb-img.qq.com/upload/adw/image/20190510/6ae827443c667576e26fa4d48d93e199-80.jpg" title="main"/>
+                            </a href="#">
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="http://ossweb-img.qq.com/upload/adw/image/20190510/6ae827443c667576e26fa4d48d93e199-80.jpg" title="main"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="http://ossweb-img.qq.com/upload/adw/image/20190510/6ae827443c667576e26fa4d48d93e199-80.jpg" title="main"/>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="button_row">
+                        <ul class="main_button">
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="banner_right">
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

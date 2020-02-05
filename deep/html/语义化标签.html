@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>语义化标签</title>
+        <link rel="icon" href="http://www.mobiletrain.org/favicon.ico" type="/image/x-icon">
+        <style>
+            ul::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            li {
+                float: left;
+                display: block;
+                width: 50px;
+                height: 30px;
+                line-height: 30px;
+                margin-left: 30px;
+            }
+            li:nth-child(1),li:nth-child(2) {
+                border-right: 1px solid gray;
+            }
+            main {
+                height: 700px;
+                width: 100%;
+            }
+            footer {
+                height: 50px;
+                line-height: 50px;
+                width: 100%;
+                text-align: center;
+            }
+            figcaption {
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <head>
+            <hgroup>
+                <h1>主标题</h1>
+                <h2>副标题</h2>
+                <nav>
+                    <ul>
+                        <li>首页</li>
+                        <li>选项</li>
+                        <li>关于</li>
+                    </ul>
+                </nav>
+            </hgroup>
+        </head>
+        <main>
+            主要内容
+            <article>
+                <section>
+                    <figure>
+                        <img src="../img/youku.jpg" alt="">
+                        <figcaption>
+                            新水果篮子♥高甜
+                        </figcaption>
+                    </figure>
+                </section>
+                <section>
+                    <input type="text" list="list" name="data">
+                    <datalist id='list'>
+                        <option value='a'>a</option>
+                        <option value='ab'>ab</option>
+                        <option value='abc'>abc</option>
+                        <option value='abcd'>abcd</option>
+                        <option value='abccd'>abccd</option>
+                    </datalist>
+                </section>
+                <section>
+                    <details>
+                        <summary>HTML</summary>
+                        <p>超文本标记语言</p>
+                    </details>
+                    <progress min='0' max="10" value="7">
+
+                    </progress>
+                    <meter min="=0" max="100" low="60" high='90' value="78"></meter>
+                    <p>将故事写成<mark>我们</mark></p>
+                </section>
+            </article>
+            <aside>
+                说明部分
+            </aside>
+            <img src="http://img3.imgtn.bdimg.com/it/u=4114175742,534413041&fm=15&gp=0.jpg" alt="将故事写成我们">
+        </main>
+        <footer>
+            &copy;版权所有
+        </footer>
+    </body>
+</html>
