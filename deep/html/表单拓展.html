@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" href="http://www.mobiletrain.org/favicon.ico" type="/image/x-icon">
+        <title>表单拓展</title>
+        <style>
+            fieldset {
+                width: 250px;
+                max-height: 300px;
+            }
+            .test input{
+                display: none;
+            }
+            .test input:checked + div{/* 同一级别下的div */
+                background-position: 0px -28px;
+            }
+            .test div {
+                width: 28px;
+                height: 28px;
+                background: url(../img/checkbox.png);
+            }
+            .file input{
+                display: none;
+            }
+            .file div {
+                width: 86px;
+                height: 34px;
+                background: url(../img/upload.png);
+            }
+        </style>
+    </head>
+    <body>
+        <input type="radio" name="sex" id="man" checked='checked'>
+        <label for="man">男</label>
+        <input type="radio" name="sex" id="woman">
+        <label for="woman">女</label>
+        <fieldset>
+            <legend>自定义选中样式</legend>
+            <label class="test">
+                <input type="checkbox"/>
+                <div></div>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>新建上传按钮</legend>
+            <label class="file">
+                <input type="file">
+                <div></div>
+            </label>
+        </fieldset>
+
+    </body>
+</html>

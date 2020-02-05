@@ -50,7 +50,7 @@
     针对网页中的程序代码的显示效果。
     <pre>
         <code>
-            中间书写代码。很多需要转义比如&lt;(小于号)、&gt（大于号）
+            中间书写代码。很多需要转义比如&lt;(小于号)、&gt;（大于号）
         </code>
     </pre>
 ```
@@ -144,6 +144,7 @@
     <meta http-equiv="refresh" content="3" url="">
     <meta http-equiv="expires" content="Wed, 20 Jun 2019 22:33:00 GMT">
 ```
+
 ### 13. HTML5新的语义化标签？
 ```
     header : 页眉
@@ -175,7 +176,7 @@
         <datalist id='list'>
             <option value='a'></option>
         </datalist>
-    details：显示详细内容
+    details：显示详细内容(设置open可以默认打开)
         <details>
             <summary>
                 HTML
@@ -189,16 +190,23 @@
     </progress>
     meter:显示进度(显示效果与progress略有不同，用处也不同)
     <meter min='' max='' value='' low='' high=''></meter>可以根据是否在low和high之间显示不同效果
-14. 表格扩展学习？
+```
 
-    添加单线 : border-collapse : collapse
-    隐藏空单元 : empty-cells : hide
+### 14. 表格扩展学习？
+```
+    添加单线 : border-collapse : collapse(边框单线)
+    隐藏空单元 : empty-cells : hide(隐藏空单元格)
     斜线分类 : border / rotate
-    列分组 : colgroup  / col
+    列分组 : colgroup  / col(为对应的列设置样式)
+    colgroup:col
+        <colspan>
+            <col span='2'>//可对前两列设置样式
+            <col span='3'>//可对后两列设置样式
+        </colspan>
+```
 
-
-15. 表单扩展学习？
-
+### 15. 表单扩展学习？
+```
     美化表单控件：   1. label + :checked    2. position + opacity
 
     新的input控件
@@ -226,10 +234,12 @@
 	   fieldset  :  表单内元素分组 
 	   legend  :  为fieldset元素定义标题
 	   optgroup  :  定义选项组
+```
 
-16. BFC规范？
-
+### 16. BFC规范？
+```
     触发BFC规范的元素，可以形成一个独立的容器。不受到外界的影响，从而解决一些布局问题。
 
     触发的样式：
         float、display、position、overflow
+```
