@@ -15,7 +15,8 @@
 </head>
 <body>
     <div>
-        <form action="http:www.baidu.com">
+        <!-- 新的input -->
+        <form action="http:www.baidu.com" hidden>
             <p>
                 <span>range:</span>
                 <input type="range" name="range" id="range" min="10" max="90">
@@ -34,7 +35,7 @@
             </p>
             <p>
                 <span>color:</span>
-                <input type="color"/>
+                <input type="color" value="#0000FF"/>
             </p>
             <p>
                 <span>number:</span>
@@ -55,6 +56,11 @@
             <p>
                 <input type="submit" value="提交">
             </p>
+        </form>
+        <!-- 表单属性 -->
+        <form action="https:www.baidu.com">
+            <input type="text" name="text" id="text" autocomplete="on" autofocus required pattern="\d+">
+            <input type="submit" value="提交">
         </form>
     </div>
 </body>

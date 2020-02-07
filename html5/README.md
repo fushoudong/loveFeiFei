@@ -238,8 +238,38 @@
 
 ### 16. BFC规范？
 ```
-    触发BFC规范的元素，可以形成一个独立的容器。不受到外界的影响，从而解决一些布局问题。
+    触发BFC规范的元素，可以形成一个独立的容器。不受到外界的影响，从而解决一些布局问题。(前面的margin边框问题 )
 
     触发的样式：
-        float、display、position、overflow
+        float、display(inline-block、flex)、position(absolute、fixed)、overflow(hidden/scroll/auto)
+    解决边框问题：
+      out：设置BFC规范(overflow:hidden)
+      div1与div2分别设置上下边框
+        <div class="out">
+            <div class="div1">
+
+            </div>
+        </div>
+        <div class="out">
+            <div class="div2">
+
+            </div>
+        </div>
+    margin传递问题:(嵌套div)
+        <div class=''>
+            <div>
+            </div>
+        </div>
+        内层设置边距，外层设置BFC规范
+    解决浮动问题:
+      设置左边固定，右边内容自动适应
+      .left {
+          height: 300px;
+          width: 200px;
+          float: left;
+      }
+      .right {
+          height: 300px;
+          overflow: hidden;
+      }
 ```
