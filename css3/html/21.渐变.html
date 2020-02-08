@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>渐变</title>
+        <style>
+            body {
+                text-align: center;
+                line-height: 200px;
+                tab-size: 20px;
+                color: white;
+            }
+            body::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .box1 {
+                float: left;
+                margin-left: 20px;
+                width: 200px;
+                height: 200px;
+                background: linear-gradient(red,blue);
+            }
+            .box2 {
+                float: left;
+                margin-left: 20px;
+                width: 200px;
+                height: 200px;
+                background: linear-gradient(to right,red,blue);
+            }
+            .box3 {
+                float: left;
+                margin-left: 20px;
+                width: 200px;
+                height: 200px;
+                background: linear-gradient(to right top,red,blue);
+            }
+            .box4 {
+                float: left;
+                margin-left: 20px;
+                width: 200px;
+                height: 200px;
+                background: linear-gradient(red 25%,blue 75%);
+            }
+            .box5 {
+                float: left;
+                margin-left: 20px;
+                width: 200px;
+                height: 200px;
+                background: linear-gradient(red 50%,blue 50%);
+            }
+            .div1 {
+                float: left;
+                margin-left: 20px;
+                width: 200px;
+                height: 200px;
+                background: radial-gradient(red ,blue);
+            }
+            .div2 {
+                float: left;
+                margin-left: 20px;
+                width: 200px;
+                height: 200px;
+                background: radial-gradient(red 25%,green 50%, blue 75%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">默认线性渐变</div>
+        <div class="box2">右向线性渐变</div>
+        <div class="box3">右上角线性渐变</div>
+        <div class="box4">设置起始</div>
+        <div class="box5">双颜色</div>
+        <div class="div1">径向渐变</div>
+        <div class="div2">多层径向渐变</div>
+    </body>
+</html>

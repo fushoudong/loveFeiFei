@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>翻转图片</title>
+        <style>
+            .parent {
+                width: 640px;
+                height: 320px;
+                position: relative;
+                margin: 100px auto;
+                perspective: 700px;
+            }
+            .parent div {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                transition: 2s;
+                backface-visibility: hidden;/* 隐藏使反面效果不可见 */
+            }
+            .parent div img {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+            div:first-child {
+                transform: rotateY(0deg);
+            }
+            div:last-child {
+                transform: rotateY(-180deg);
+            }
+            .parent:hover div:first-child {
+                transform: rotateY(180deg);
+            }
+            .parent:hover div:last-child {
+                transform: rotateY(0deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div>
+                <img src="../img2/img1.jpg" alt=""/>
+            </div>
+            <div>
+                <img src="../img2/img2.jpg" alt="">
+            </div>
+        </div>
+    </body>
+</html>

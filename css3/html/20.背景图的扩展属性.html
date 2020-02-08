@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>背景图的拓展属性</title>
+        <style>
+
+            .box1 {
+                width: 700px;
+                height: 400px;
+                border: 40px solid RGBA(0,255,255,.5);
+                padding: 10px;
+                margin: 100px auto;
+                background: url(../img2/img2.jpg) border-box content-box;
+                /* background-size: contain; */
+                /* background-origin: border-box;/* 边框开始 */
+                /* background-origin: content-box; 内容开始*/
+                /* background-origin: padding-box; 边框结束开始 */
+                /* background-clip: border-box; */ 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">
+
+        </div>
+    </body>
+</html>

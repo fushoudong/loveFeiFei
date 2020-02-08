@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>渐变的进度条</title>
+        <style>
+            .progress {
+                width: 300px;
+                height: 30px;
+                background-image: linear-gradient( to right top,#d3d3d3 25%,#090 25%,#090 50%,#d3d3d3 50%,#d3d3d3 75%,#090 75%);
+                background-size: 30px;
+                margin: 30px auto;
+                animation: move 5s infinite linear;
+            }
+            @keyframes move {
+                from {background-position: 0px 0px;}
+                to {background-position: 300px 0px;}
+            }
+        </style>
+    </head>
+    <body>
+        <progress min='0' max="100" value="70">
+        </progress>
+        <meter min="0" max="10" value="10" low="6" high="9">
+
+        </meter>
+        <div class="progress">
+
+        </div>
+    </body>
+</html>

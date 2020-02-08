@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>斜切的导航</title>
+        <style>
+            ul, li {
+                padding: 0px;
+                margin: 0px;
+                list-style: none;
+            }
+            ul {
+                width: 440px;
+                height: 40px;
+                overflow: hidden;
+                margin: 30px auto;
+            }
+            li {
+                width: 100px;
+                margin-left: 10px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: white;
+                background: red;
+                float: left;
+                transform: skew(-30deg);
+                cursor: pointer;
+            }
+            li:first-child {
+                padding-left: 20px;
+                margin-left: -20px;
+                background: blue;
+            }
+            li:last-child {
+                padding-right: 20px;
+                margin-right: -30px;
+            }
+            span {
+                display: block;
+                transform: skew(30deg);
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><span>主页</span></li>
+            <li><span>关于我们</span></li>
+            <li><span>联系方式</span></li>
+            <li><span>附加</span></li>
+        </ul>
+    </body>
+</html>

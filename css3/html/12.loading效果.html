@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>loading加载</title>
+        <style>
+            .loading {
+                width: 40px;
+                height: 40px;
+                position: relative;
+                margin: 30px auto;
+
+            }
+            .box1, .box2 {
+                width: 40px;
+                height: 40px;
+                position: absolute;
+            }
+            .box1 div, .box2 div {
+                height: 10px;
+                width: 10px;
+                border-radius: 5px;
+                background-color: lightseagreen;
+                position: absolute;
+                animation: loading 1.5s linear infinite;
+            }
+            .box1 div:nth-child(1), .box2 div:nth-child(1) {
+                top: 0;
+                left: 0;
+            }
+            .box1 div:nth-child(2), .box2 div:nth-child(2) {
+                top: 0;
+                right: 0;
+            }
+            .box1 div:nth-child(3), .box2 div:nth-child(3) {
+                bottom: 0;
+                right: 0;
+            }
+            .box1 div:nth-child(4), .box2 div:nth-child(4) {
+                bottom: 0;
+                left: 0;
+            }
+            .box2 {
+                transform: rotate(45deg);
+            }
+
+            @keyframes loading {
+                0% {transform: scale(1); opacity: 1;}
+                50% {transform: scale(0); opacity: 0;}
+                100% {transform: scale(1); opacity: 1;}
+            }
+            .box1 div:nth-child(1){
+                animation-delay: 0s;
+            }
+            .box2 div:nth-child(1) {
+                animation-delay: -0.2s;
+            }
+            .box1 div:nth-child(2) {
+                animation-delay: -0.4s;
+            }
+            .box2 div:nth-child(2) {
+                animation-delay: -0.6s;
+            }
+            .box1 div:nth-child(3) {
+                animation-delay: -0.8s;
+            }
+            .box2 div:nth-child(3) {
+                animation-delay: -1s;
+            }
+            .box1 div:nth-child(4) {
+                animation-delay: -1.2s;
+            }
+            .box2 div:nth-child(4) {
+                animation-delay: -1.4s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loading">
+            <div class="box1">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="box2">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>animation附加</title>
+        <style>
+            .div1, .div2, .div3, .div4 {
+                width: 100px;
+                height: 100px;
+                background: red;
+                text-align: center;
+                line-height: 100px;
+                margin: 5px;
+                
+            }
+            .div1 {
+                animation: move 3s 1s;
+                animation-fill-mode: none;
+            }
+            .div2 {
+                animation: move 3s 1s;
+                animation-fill-mode: backwards;
+            }
+            .div3 {
+                animation: move 3s 1s;
+                animation-fill-mode: forwards;
+            }
+            .div4 {
+                animation: move 3s 1s;
+                animation-fill-mode: both;
+            }
+            @keyframes move {
+                0% {transform: translate(0px, 0px); background: blue;}
+                100% {transform: translate(300px, 0px);}
+            }
+            .box1, .box2, .box3 {
+                margin: 10px;
+                width: 100px;
+                height: 100px;
+                background: blue;
+                line-height: 100px;
+                text-align: center;
+                color: white;
+                animation: direction 2s infinite ease;
+            }
+            .box1 {
+                animation-direction: alternate;
+            }
+            .box2 {
+                animation-direction: reverse;
+            }
+            .box3 {
+                animation-direction: normal;
+            }
+            @keyframes direction {
+                from {transform: translate(0px,0px);}
+                to {transform: translate(300px,0px);}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div1">none</div>
+        <div class="div2">backwards</div>
+        <div class="div3">forwards</div>
+        <div class="div4">both</div>
+        <div class="box1">alternate</div>
+        <div class="box2">reverse</div>
+        <div class="box3">normal</div>
+    </body>
+</html>

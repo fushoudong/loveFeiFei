@@ -71,12 +71,12 @@ CSS3附加
 
 ### 3. transform变形？
 ```
-    translate : 位移
+    translate : 位移(x,y)
         translateX
         translateY
         translateZ   ( 3d )
     
-    scale : 缩放 （值是一个比例值，正常大小就是1，会已当前元素中心点进行缩放）
+    scale : 缩放 （值是一个比例值，正常大小就是1，会已当前元素中心点进行缩放）(x,y)
         scaleX
         scaleY
         scaleZ   (3d)
@@ -96,7 +96,7 @@ CSS3附加
         3. 复合写法，可以同时添加多个变形操作。
             执行是有顺序的，先执行后面的操作，再执行前面的操作。
             translate会受到 rotate、scale、skew的影响
-        4. transform-origin : 基点的位置
+        4. transform-origin : 基点的位置(写在要变化的div)
             x y z(3d)
 ```
 
@@ -105,7 +105,7 @@ CSS3附加
     animation-name : 设置动画的名字 (自定义的)
     animation-duration : 动画的持续时间
     animation-delay : 动画的延迟时间
-    animation-iteration-count : 动画的重复次数 ，默认值就是1 ，infinite无限次数
+    animation-iteration-count :  动画的重复次数 ，默认值就是1 ，infinite无限次数
     animation-timing-function : 动画的运动形式
 
     注：
@@ -157,15 +157,15 @@ CSS3附加
     transform-style : 3D空间
 	    flat  (默认值2d)、preserve-3d   (3d，产生一个三维空间)
 
-    backface-visibility : 背面隐藏
+    backface-visibility : 背面隐藏//设置在隐藏的布局中
 	    hidden、visible (默认值)
 ```
 
 ### 7. CSS3提供了扩展背景样式？
 ```
     background-size : 背景图的尺寸大小
-	    cover : 覆盖
-	    contain : 包含 
+	    cover : 覆盖（填满）
+	    contain : 包含 (完全显示，取决于长的一部分，可能会存在未填充部分)
     background-origin : 背景图的填充位置
 	    padding-box (默认)
 	    border-box
@@ -176,6 +176,7 @@ CSS3附加
 	    content-box 
 
     注：复合样式的时候，第一个是位置，第二个是裁切
+    background: url() no-repeat content-box(位置) content-box(裁切);
 ```
 
 ### 8. CSS3渐变？
@@ -204,4 +205,29 @@ CSS3附加
         @font-face语法
 
             像.woff等文件都是做兼容平台处理的, mac、linux等。
+        阿里巴巴矢量图标库:
+            https://www.iconfont.cn/
+        1.使用黑色图标
+          1) 下载文件
+          2) 在head里面添加链接引入css
+            <link ref='stylesheet' href=''>
+          3) 使用样式
+            <span class='iconfont icon-XX></span>
+        2.使用彩色图标
+          1) 下载文件
+          2) 在head里面添加链接引入css
+            <link ref='stylesheet' href=''/>
+            <script src=''/>
+          3) 在style中设置样式
+            icon {
+                width: 1em;
+                height: 1em;
+                vertical-align: -0.15em;
+                fill: currentColor;
+                overflow: hidden;
+            }
+          4) 使用图标
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-xxx(修改为指定图标)"></use>
+            </svg>
 ```
