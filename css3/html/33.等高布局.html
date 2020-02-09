@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>等高布局</title>
+        <!-- 分为两列，左列和右列，其中两列的高度由其中比较大的决定 -->
+        <style>
+            #parent {
+                border: 3px black solid;
+                overflow: hidden;
+            }
+            .box1 {
+                margin-bottom: -2000px;
+                padding-bottom: 2000px;
+                background: red;
+                width: 100px;
+                float: left;
+            }
+            .box2 {
+                margin-bottom: -2000px;
+                padding-bottom: 2000px;
+                background: blue;
+                width: 100px;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="parent">
+            <div class="box1">
+                <p>ffffff</p>
+                <p>ffffff</p>
+                <p>ffffff</p>
+                <p>ffffff</p>
+                <p>ffffff</p>
+            </div>
+            <div class="box2">
+                <p>dddddd</p>
+                <p>dddddd</p>
+                <p>dddddd</p>
+                <p>dddddd</p>
+                <p>dddddd</p>
+                <p>dddddd</p>
+                <p>dddddd</p>
+                <p>dddddd</p>
+                <p>dddddd</p>
+                <p>dddddd</p>
+            </div>
+        </div>
+    </body>
+</html>

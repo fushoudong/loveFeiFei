@@ -24,7 +24,8 @@
                 height: 200px;
                 border: 1px solid black;
                 margin: 200px auto;
-                perspective: 100px;
+                perspective: 500px;
+                perspective-origin: top;
             }
             ul {
                 position: relative;
@@ -38,6 +39,7 @@
                 width: 100%;
                 height: 100%;
                 position: absolute;
+                /* backface-visibility: hidden; */
             }
             li:nth-child(1) {
                 transform: rotateY(0deg) translateZ(200px);

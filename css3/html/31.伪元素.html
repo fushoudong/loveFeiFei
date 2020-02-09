@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>伪元素</title>
+        <style>
+            div {
+                width: 200px;
+                height: 300px;
+                border: 1px black solid;
+                transition: 1s;
+                margin: 200px auto;
+            }
+            div:hover {
+                box-shadow: 5px 5px 10px gray;
+                margin-top: 195px;
+                border-radius: 5px;
+            }
+            div::selection {/* 伪元素：弥补dom不足，创建行内元素 */
+                background: red;
+                color: yellow;
+            }
+            div::after {
+                content: '——loveFeiFei';
+                color: red;
+                padding-left: 85px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            这故事 开始一个人,
+                我认真 写成了我们,
+                这段缘分 没有人转身,
+                你也 开始修改剧本,
+                加重我的戏分,
+                初心单纯 给了你的吻<br>
+                这一生 原本一个人,
+                你坚持 厮守成我们,
+                所有未来 说好了一起等,
+                青春 的誓言扎了根,
+                愿望比谁都深,
+                过了门 永远是 一家人<br>
+        </div>
+    </body>
+</html>

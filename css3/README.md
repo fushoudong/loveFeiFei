@@ -54,6 +54,7 @@ CSS3附加
     </tfoot>
 </table>
 
+
 ###　2. transition 过渡？
 ```
     transition-property  :  规定设置过渡效果的CSS属性的名称。
@@ -189,6 +190,7 @@ CSS3附加
 ```
 
 ### 9. 字体图标？
+
 ```
     font-face是CSS3中的一个模块，他主要是把自己定义的Web字体嵌入到你的网页中。
  
@@ -231,3 +233,182 @@ CSS3附加
                 <use xlink:href="#icon-xxx(修改为指定图标)"></use>
             </svg>
 ```
+
+### 10. text-shadow:
+```
+    文字的阴影
+    x y blur(模糊值) color 
+
+    注：阴影的默认颜色是跟文字样色相同
+    注：通过逗号的方式进行分割，可以设置多阴影
+      eg:
+        text-shadow: 2px -2px 5px orange ,4px -4px 10px yellow;
+```
+
+### 11. box-shadow：
+```
+	x
+	y
+	blur
+	spread(阴影扩散)
+	color
+	inset(内阴影)
+	多阴影
+
+    注：盒子阴影的默认样色是黑色。
+    注：默认就是外阴影，如果设置outset不起作用，可选的值只有inset表示内阴影。
+      eg:
+        box-shadow: 
+```
+
+### 12. mask 遮罩
+```
+    url
+	repeat
+	x
+	y
+	w
+	h
+	多遮罩
+
+    注：mask目前还没有标准化，所以需要添加浏览器前缀。
+    chrome需要使用-webkit-mask设置
+
+    注：默认是x、y都平铺。
+```
+
+### 13. box-reflect
+```
+	above   上
+	below   下
+	left    左
+	right   右
+	距离
+	遮罩 | 渐变 
+
+    渐变：只是针对透明度的渐变，不能支持颜色的渐变。
+      附：
+        此处的透明度要使用rgba显示方式
+```
+
+### 14.   blur模糊
+```
+    使用：filter: blur (10px)
+      设置为像素值，值越大，模糊越明显
+```
+
+### 15. calc计算
+```
+    四则运算
+        主要实现百分比与像素之间的运算
+        width: clac(100% - 100px)
+```
+### 16. 分栏布局
+```
+      column-count : 分栏的个数
+      column-width : 分栏的宽度 
+      column-gap : 分栏的间距   
+      column-rule : 分栏的边线
+      column-span : 合并分栏
+
+    注：column-width和column-count不要一起去设置。
+```
+
+### 17. 伪元素：
+```
+    伪元素本质上是创建了一个有内容的虚拟容器。这个容器不包含任何DOM元素，但是可以包含内容。另外，开发者还可以为伪元素定制样式。
+    :: selection：设定在虚拟容器上，指定选中文本的样式
+    :: first-line   /    first-letter
+    :: before     /     after 
+    …	
+    关键：弥补dom元素的不足以及创建虚拟元素
+```
+
+### 18. CSS  Hack分类
+```
+	1. CSS属性前缀法
+        .elem{ _background:red; }
+        示例：
+          .elem {
+              background: red;
+              _background: blue;
+          }
+
+	2. 选择器前缀法
+
+        *html .elem{ }
+
+	3. IE条件注释法
+
+        IE10以上已经不支持注释法
+```
+1. 浏览器前缀
+<table border='yes'>
+    <caption>IE浏览器前缀</caption>
+    <tr>
+        <th width='100'>前缀标识</th>
+        <th width='200'>兼容浏览器</th>
+    </tr>
+    <tr>
+        <td align='center'>_</td>
+        <td align='center'>IE6</td>
+    </tr>
+    <tr>
+        <td align='center'>+ | *</td>
+        <td align='center'>IE6、IE7</td>
+    </tr>
+    <tr>
+        <td align='center'>\9</td>
+        <td align='center'>IE6、IE7、IE8、IE9</td>
+    </tr>
+    <tr>
+        <td align='center'>\0</td>
+        <td align='center'>IE8、IE9、IE10、IE11</td>
+    </tr>
+</table>
+
+2. 选择器前缀
+<table border='yes'>
+    <caption>IE选择器前缀</caption>
+    <tr>
+        <th width='100'>前缀标识</th>
+        <th width='200'>兼容浏览器</th>
+    </tr>
+    <tr>
+        <td align='center'>*html</td>
+        <td align='center'>IE6</td>
+    </tr>
+    <tr>
+        <td align='center'>*+html</td>
+        <td align='center'>IE7</td>
+    </tr>
+    <tr>
+        <td align='center'>:root</td>
+        <td align='center'>IE9及以上</td>
+    </tr>
+</table>
+
+### 19. IE低版本常见BUG
+```
+    1. 透明度(filter:alpha(opacity=50))
+	2. 双边距(解决：_display:inline)(出现原因：float加边距)
+	3. 最小高度
+	4. 图片边框
+```
+- 渐进增强：针对低版本浏览器进行页面构建，保证最基本的功能后再针对高版本进行效果交互等改进与追加功能以达到更好的用户体验。
+- 优雅降级：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容性问题
+### 20. 布局扩展
+```
+    1. 等高布局
+        利用margin-bottom负值与padding-bottom配合实现。
+
+    2. 三列布局，左右固定，中间自适应
+
+        1. BFC方式 
+        2. 定位
+        3. 浮动 ( 双飞翼布局、圣杯布局 )
+            margin负值
+
+        4. flex弹性
+```
+
