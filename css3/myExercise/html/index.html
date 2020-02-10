@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>正达管理后台首页</title>
+        <link rel="icon" href="http://www.mobiletrain.org/favicon.ico" type="/image-icon">
+        <link rel="stylesheet" href="../css/css.css">
+        <link rel="stylesheet" href="../iconfont/iconfont.css">
+        <style>
+            .head_logo {
+                float: left;
+                width: 49px;
+                height: 36px;
+                margin: 19px 0px 25px 20px;
+            }
+            .head_title {
+                float: left;
+                width: 240px;
+                height: 25px;
+                font-family: '微软雅黑';
+                font-size: 24px;
+                color: white;
+                margin: 28px 0px 27px 14px;
+            }
+            .head_menu {
+                width: 440px;
+                height: 20px;
+                margin: 30px;
+                margin-right: 10px;
+                float: right;
+                font-size: 14px;
+                font-family: '微软雅黑';
+                color: white;
+            }
+            .header_icon_name {
+                width: fit-content;
+                height: fit-content;
+                margin: 33px 17px 33px 2px;
+                transition: 1s;
+            }
+            .header_icon_name:hover {
+                cursor: pointer;
+                text-shadow: 3px 3px 30px white;
+                color: aquamarine;
+            }
+            .aside_menu {
+                width: 100%;
+                height: 100%;
+            }
+            .aside_menu li {
+                cursor: pointer;
+                width: 100%;
+                height: 141px;
+                overflow: hidden;
+                background: #424147;
+            }
+            .aside_menu li i {
+                width: 40px;
+                height: 40px;
+                display: block;
+                font-size: 40px;
+                margin: 35px 80px 0px 80px;
+            }
+            .aside_menu li p {
+                text-align: center;
+                margin-top: 10px;
+                font-size: 16px;
+            }
+            .aside_menu li:nth-child(1) {
+                color: white;
+                background: rgba(66 ,65 ,71 ,.9) !important;
+            }
+            .aside_menu li:nth-child(2) {
+                border-bottom: 1px #3a393e solid;
+                border-top: 1px #49484e solid;
+                color:#9a999e !important;
+            }
+            .aside_menu li:nth-child(3) {
+                border-bottom: 1px #3a393e solid;
+                border-top: 1px #49484e solid;
+                color: #9a999e !important;
+            }
+            aside .bg {
+                width: 200px;
+                height: 440px;
+                background: #424147;
+            }
+            .titleLeft {
+                float: left;
+                width: 400px;
+                height: 150px;
+                margin: 21px 0px 21px 230px;
+
+            }
+            .titleRight {
+                float: right;
+                margin: 20px 20px 20px 0px;
+                width: 200px;
+                height: 149px;
+            }
+            h1 {
+                font: 24px '微软雅黑' ;
+            }
+            .leftContent {
+                margin-top: 8px;
+            }
+            .leftContent strong {
+                font-family: '微软雅黑';
+                font-size: 14px;
+            }
+            .leftContent p {
+                margin-top: 4px;
+            }
+            .leftContent span {
+                font-family: '微软雅黑';
+                font-size: 14px;
+                color: #9a999e;
+            }
+            h1 span {
+                font-size: 22px !important;
+                margin-left: 15px;
+                cursor: pointer;
+            }
+            .banner {
+                float: left;
+                width: 100%;
+                height: 60px;
+                background:#f1f9fc;
+                border-top: 1px #e0eaef solid;
+                border-bottom: 1px #dbe7ed solid;
+                box-sizing: border-box;
+            }
+            .banner_menu {
+                margin: 17px 0px 1px 228px;
+            }
+            .banner_menu::after {
+                display: block;
+                clear: both;
+                content: '';
+            }
+            .banner_menu li {
+                float: left;
+                width: 110px;
+                height: 40px;
+                margin-left: 12px;
+                display: block;
+                border-radius: 5px 5px 0px 0px;
+                background-color: white;
+                border: 1px #dbe7ed solid;
+            }
+            .banner_menu li a {
+                display: block;
+                width: 100%;
+                width: 100%;
+                line-height: 40px;
+                text-align: center;
+                color: #666666;
+            }
+            .banner_menu li:last-child a{
+                background-color: #018ffb;
+                color: white;
+            }
+            .banner_menu li:last-child img{
+                margin-left: 49.5px;
+            }
+            .input {
+                float: left;
+                height: 80px;
+                width: 100%;
+            }
+            .singleUpload, .multipUpload {
+                float: left;
+                display: block;
+                margin-left: 220px;
+                width: 110px;
+                height: 32px;
+                margin-top: 24px;
+            }
+            .multipUpload {
+                margin-left: 20px;
+            }
+            .singleUpload input, .multipUpload input {
+                display: none;
+            }
+            .singleUpload div, .multipUpload div{
+                background-color: #5FD15C;
+                border-radius: 5px;
+                color: white;
+                width: 100%;
+                height: 100%;
+                line-height: 32px;
+                text-align: center;
+                font-size: 14px;
+            } 
+            .multipUpload div {
+                background: #34C1DA;
+            }
+            .search {
+                float: right;
+                width: 212px;
+                height: 32px;
+                margin-top: 24px;
+                margin-right: 20px;
+            }
+            .search input {
+                float: left;
+                width: 166px;
+                height: 30px;
+                padding-left: 10px;
+                border-radius: 5px 0px 0px 5px;
+                border: 1px lightsteelblue solid;
+            }
+            .search button {
+                cursor: pointer;
+                border: 1px lightsteelblue solid;
+                margin-left: -1px;
+                float: left;
+                width: 34px;
+                height: 32px;
+                background: transparent;
+            }
+            .search i {
+                font-size: 18px;
+                font-weight: 900;
+                color: #666666;
+            }
+            .table {
+                float: left;
+                width: 100%;
+                height: 459px;
+                margin-bottom: 20px;
+            }
+            .table table {
+                margin-left: 220px;
+                border-collapse: collapse;
+                border: 1px #dbe7ed solid;
+            }
+            footer div {
+                float: right;
+                width: 529px;
+                height: 14px;
+                margin-top: 18px;
+                font-size: 12px;
+                margin-right: 20px;
+                font-family: '微软雅黑';
+                color: #888888;
+            }
+            td:nth-child(1) {
+                text-indent: 0em;
+                text-align: center;
+            }
+            td span {
+                color: #34C1DA;
+            }
+            td em {
+               color: #3da2f0;
+            }
+            td i {
+                margin-left: 10px;
+                color: #d94141;
+            }
+            .buttonFoot {
+                float: left;
+                width: 80px;
+                height: 26px;
+                margin-left: 15px;
+                font-size: 12px;
+                color: #1B84BA;
+                cursor: pointer;
+                border: 1px #c9e4f1 solid;
+                border-radius: 3px;
+                box-sizing: border-box;
+                background-image: linear-gradient(#F7FCFF , #E7F4FA);
+            }
+            .pager {
+                width: 434px;
+                height: 26px;
+                box-sizing: border-box;
+                float: right;
+                margin-right: 20px;
+            }
+            .pager ul {
+                width: 100%;
+                height: 100%;
+            }
+            .pager ul li {
+                float: left;
+                margin-left:10px;
+                display: block;
+                color: #333333;
+                line-height: 26px;
+                text-align: center;
+                padding: 0px 8px 0px 8px;
+                border-radius: 3px;
+                border: 1px solid #e6e6e6;
+            }
+            .pager ul li a {
+                width: 100%;
+                display: block;
+                color: #333333;
+                font-size: 14px;
+                background-origin: padding-box;
+            }
+            .pager ul li:nth-child(4) {
+                background:#42adff;
+                border: 1px#3797e0 solid;
+            }
+            .pager ul li:nth-child(4) a{
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img class="head_logo" src="../image/logo.png" alt="logo" title="logo"/>
+            <div class="head_title">
+                正达建筑内部管理平台
+            </div>
+            <div class="head_menu">
+                <span class="iconfont iconwode"></span>
+                <span class="header_icon_name">欢迎您，武剑 管理员</span>
+                <span class="iconfont iconyuechi"></span>
+                <span class="header_icon_name">修改密码</span>
+                <span class="iconfont iconshouye"></span>
+                <span class="header_icon_name">公司官网</span>
+                <span class="iconfont iconplus-share"></span>
+                <span class="header_icon_name">退出</span>
+            </div>
+        </header>
+        <main>
+            <article>
+                <section class="titleLeft">
+                    <hgroup>
+                        <h1>
+                            青田高湾绿园一期、二期工程
+                            <span class="iconfont iconbianji"></span>
+                        </h1>
+                    </hgroup>
+                    <div class="leftContent">
+                        <p>
+                            <strong>
+                                项目编号：
+                            </strong>
+                            <span>
+                                CN0000507
+                            </span>
+                        </p>
+                        <p>
+                            <strong>
+                                项目类型：
+                            </strong>
+                            <span>
+                                在建工程
+                            </span>
+                        </p>
+                        <p>
+                            <strong>
+                                项目负责人：
+                            </strong>
+                            <span>
+                                梅海丽
+                            </span>
+                        </p>
+                        <p>
+                            <strong>
+                                手机号码：
+                            </strong>
+                            <span>
+                                15869168967
+                            </span>
+                        </p>
+                    </div>
+                </section>
+                <section class="titleRight"> 
+                    <img src="../image/prpject.jpg" alt="">
+                </section>
+                <section class="banner">
+                    <ul class="banner_menu">
+                        <li>
+                            <a href="#">视频监控</a>
+                        </li>
+                        <li>
+                            <a href="#">考勤管理</a>
+                        </li>
+                        <li>
+                            <a href="#">安全巡查</a>
+                        </li>
+                        <li>
+                            <a href="#">资料管理</a>
+                            <img src="../image/arrow.png"/>
+                        </li>
+                    </ul>
+                </section>
+                <section class="input">
+                    <label class="singleUpload">
+                        <input type="file">
+                        <div>
+                            <span class="iconfont iconshangchuan1"></span>
+                            单个上传
+                        </div>
+                        
+                    </label>
+                    <label class="multipUpload">
+                        <input type="file">
+                        <div>
+                            <span class="iconfont iconshangchuan"></span>
+                            多个上传
+                        </div>
+                        
+                    </label>
+                    <div class="search">
+                        <input type="text" placeholder="请输入关键字" autofocus>
+                        <button>
+                            <i class="iconfont iconsuosou"></i>
+                        </button>
+                    </div>
+                </section>
+                <section class="table"> 
+                    <table>
+                        <thead>
+                            <tr>
+                                <th width='49'>
+                                    <input type="checkbox">
+                                </th>
+                                <th width='1044'>
+                                    文档名称
+                                </th>
+                                <th width='168'>
+                                    文档大小
+                                </th>
+                                <th width='149'>
+                                    上传者
+                                </th>
+                                <th width='169'>
+                                    上传时间
+                                </th>
+                                <th width='82'>
+                                    操作
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>
+                                    <span class="iconfont iconword"></span>
+                                    安全专项方案.doc
+                                </td>
+                                <td>
+                                    21.3KB
+                                </td>
+                                <td>
+                                    陈文耀
+                                </td>
+                                <td>
+                                    2016-03-14
+                                </td>
+                                <td>
+                                    <em class="iconfont iconxiazai"></em>
+                                    <i class="iconfont iconshanchushaixuanxiang"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>
+                                    <span class="iconfont iconword"></span>
+                                    安全专项方案.doc
+                                </td>
+                                <td>
+                                    21.3KB
+                                </td>
+                                <td>
+                                    陈文耀
+                                </td>
+                                <td>
+                                    2016-03-14
+                                </td>
+                                <td>
+                                    <em class="iconfont iconxiazai"></em>
+                                    <i class="iconfont iconshanchushaixuanxiang"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>
+                                    <span class="iconfont iconword"></span>
+                                    安全专项方案.doc
+                                </td>
+                                <td>
+                                    21.3KB
+                                </td>
+                                <td>
+                                    陈文耀
+                                </td>
+                                <td>
+                                    2016-03-14
+                                </td>
+                                <td>
+                                    <em class="iconfont iconxiazai"></em>
+                                    <i class="iconfont iconshanchushaixuanxiang"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>
+                                    <span class="iconfont iconword"></span>
+                                    安全专项方案.doc
+                                </td>
+                                <td>
+                                    21.3KB
+                                </td>
+                                <td>
+                                    陈文耀
+                                </td>
+                                <td>
+                                    2016-03-14
+                                </td>
+                                <td>
+                                    <em class="iconfont iconxiazai"></em>
+                                    <i class="iconfont iconshanchushaixuanxiang"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>
+                                    <span class="iconfont iconword"></span>
+                                    安全专项方案.doc
+                                </td>
+                                <td>
+                                    21.3KB
+                                </td>
+                                <td>
+                                    陈文耀
+                                </td>
+                                <td>
+                                    2016-03-14
+                                </td>
+                                <td>
+                                    <em class="iconfont iconxiazai"></em>
+                                    <i class="iconfont iconshanchushaixuanxiang"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>
+                                    <span class="iconfont iconword"></span>
+                                    安全专项方案.doc
+                                </td>
+                                <td>
+                                    21.3KB
+                                </td>
+                                <td>
+                                    陈文耀
+                                </td>
+                                <td>
+                                    2016-03-14
+                                </td>
+                                <td>
+                                    <em class="iconfont iconxiazai"></em>
+                                    <i class="iconfont iconshanchushaixuanxiang"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>
+                                    <span class="iconfont iconword"></span>
+                                    安全专项方案.doc
+                                </td>
+                                <td>
+                                    21.3KB
+                                </td>
+                                <td>
+                                    陈文耀
+                                </td>
+                                <td>
+                                    2016-03-14
+                                </td>
+                                <td>
+                                    <em class="iconfont iconxiazai"></em>
+                                    <i class="iconfont iconshanchushaixuanxiang"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>
+                                    <span class="iconfont iconword"></span>
+                                    安全专项方案.doc
+                                </td>
+                                <td>
+                                    21.3KB
+                                </td>
+                                <td>
+                                    陈文耀
+                                </td>
+                                <td>
+                                    2016-03-14
+                                </td>
+                                <td>
+                                    <em class="iconfont iconxiazai"></em>
+                                    <i class="iconfont iconshanchushaixuanxiang"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>
+                                    <span class="iconfont iconword"></span>
+                                    安全专项方案.doc
+                                </td>
+                                <td>
+                                    21.3KB
+                                </td>
+                                <td>
+                                    陈文耀
+                                </td>
+                                <td>
+                                    2016-03-14
+                                </td>
+                                <td>
+                                    <em class="iconfont iconxiazai"></em>
+                                    <i class="iconfont iconshanchushaixuanxiang"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>
+                                    <span class="iconfont iconword"></span>
+                                    安全专项方案.doc
+                                </td>
+                                <td>
+                                    21.3KB
+                                </td>
+                                <td>
+                                    陈文耀
+                                </td>
+                                <td>
+                                    2016-03-14
+                                </td>
+                                <td>
+                                    <em class="iconfont iconxiazai"></em>
+                                    <i class="iconfont iconshanchushaixuanxiang"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>
+                                    <span class="iconfont iconword"></span>
+                                    安全专项方案.doc
+                                </td>
+                                <td>
+                                    21.3KB
+                                </td>
+                                <td>
+                                    陈文耀
+                                </td>
+                                <td>
+                                    2016-03-14
+                                </td>
+                                <td>
+                                    <em class="iconfont iconxiazai"></em>
+                                    <i class="iconfont iconshanchushaixuanxiang"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>
+                                    <span class="iconfont iconword"></span>
+                                    安全专项方案.doc
+                                </td>
+                                <td>
+                                    21.3KB
+                                </td>
+                                <td>
+                                    陈文耀
+                                </td>
+                                <td>
+                                    2016-03-14
+                                </td>
+                                <td>
+                                    <em class="iconfont iconxiazai"></em>
+                                    <i class="iconfont iconshanchushaixuanxiang"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>
+                                    <span class="iconfont iconword"></span>
+                                    安全专项方案.doc
+                                </td>
+                                <td>
+                                    21.3KB
+                                </td>
+                                <td>
+                                    陈文耀
+                                </td>
+                                <td>
+                                    2016-03-14
+                                </td>
+                                <td>
+                                    <em class="iconfont iconxiazai"></em>
+                                    <i class="iconfont iconshanchushaixuanxiang"></i>
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                <td>
+                                    <input type="checkbox">
+                                </td>
+                                <td>
+                                    <span class="iconfont iconword"></span>
+                                    安全专项方案.doc
+                                </td>
+                                <td>
+                                    21.3KB
+                                </td>
+                                <td>
+                                    陈文耀
+                                </td>
+                                <td>
+                                    2016-03-14
+                                </td>
+                                <td>
+                                    <em class="iconfont iconxiazai"></em>
+                                    <i class="iconfont iconshanchushaixuanxiang"></i>
+                                </td>
+                            </tr> -->
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6">
+                                    <button class="buttonFoot">批量删除</button>
+                                    <button class="buttonFoot">批量下载</button>
+                                    <div class="pager">
+                                        <ul>
+                                            <li>
+                                                <a href="#">共12条</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">首页</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">上一页</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">3</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">下一页</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">尾页</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </section>
+            </article>
+        </main>
+        <aside>
+            <div>
+                <ul class="aside_menu">
+                    <li>
+                        <i class="iconfont iconloukongguanli"></i>
+                        <p>项目管理</p>
+                    </li>
+                    <li>
+                        <i class="iconfont iconyonghuxinxi"></i>
+                        <p>用户管理</p>
+                    </li>
+                    <li>
+                        <i class="iconfont iconshezhi"></i>
+                        <p>系统设置</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg"></div>
+        </aside>
+        <footer>
+            <div>
+                Copyright &copy; 2009 -2016 丽水市正达建筑工程有限公司  All rights reserved.  技术支持：红点智能
+            </div>
+        </footer>
+    </body>
+</html>
