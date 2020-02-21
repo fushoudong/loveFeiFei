@@ -34,12 +34,6 @@ ul:hover {
 .box8 {
   display: inline-block;
 }
-.box10 {
-  background: url(../css3/img/1.png), url(../css3/img/2.png);
-}
-.box11 {
-  transform: scale(12) rotate(30deg);
-}
 .box12 {
   width: 100px;
 }
