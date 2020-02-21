@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>遮罩效果</title>
+        <style>
+            .box {
+                width: 150px;
+                height: 150px;
+                margin: 50px auto;
+                box-shadow: 0px 2px 20px ;
+                transition: 5s;
+                -webkit-mask: url(../../img3/car.png) no-repeat center center / 150px 150px;
+            }
+            .box img {
+                width: 150px;
+                height: 150px;
+            }
+            .box:hover {
+                -webkit-mask: url(../../img3/love.png) no-repeat center center / 150px 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <img src="../../img2/3.jpg"/>
+        </div>
+    </body>
+</html>

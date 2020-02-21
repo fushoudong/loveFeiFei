@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>grid布局</title>
+        <style>
+            .box {
+                width: 500px;
+                height: 500px;
+                border: 1px gray dashed;
+                display: grid;
+                /* grid-template-columns: 100px 100px 150px 150px;
+                grid-template-rows: 100px auto 25%; */
+                /* grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr; */
+                /* grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(3,1fr);
+                grid-template-areas: "a1 a1 a1" " a2 a2 a3" "a2 a2 a3"; */
+                grid-template: 
+                    "a1 a1 a1" 1fr
+                    "a2 a2 a3" 1fr
+                    "a2 a2 a3" 1fr
+                    /1fr 1fr 1fr;
+                grid-column-gap: 20px;
+                grid-row-gap: 10px;
+            }
+            .box div{
+                background: red;
+                line-height: 100%;
+                text-align: center;
+                color: white;
+                border: 1px solid black;
+            }
+            .box div:nth-child(1) {
+                grid-area: a1;
+            }
+            .box div:nth-child(2) {
+                grid-area: a2;
+            }
+            .box div:nth-child(3) {
+                grid-area: a3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </body>
+</html>

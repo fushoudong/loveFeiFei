@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>rem实战</title>
+        <link rel="stylesheet" href="./css/iconfont.css">
+        <style>
+            * {
+                padding: 0rem;
+                margin: 0rem;
+            }
+            html {
+                font-size: 26.66667vw;
+            }
+            body {
+                font-size: 0.16rem;
+            }
+            ul,li {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: #9a9a9a;
+            }
+            img {
+                display: block;
+            }
+            header {
+                width: 100%;
+                height: 0.45rem;
+                background: #00b38a;
+                color: white;
+                font-size: 0.18rem;
+                line-height: 0.45rem;
+                text-align: center;
+            }
+            .login {
+                width: 100%;
+                height: 0.43rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .login span {
+                margin-left: 0.16rem;
+            }
+            .login a {
+                display: block;
+                width: 0.84rem;
+                height: 0.3rem;
+                margin-right: 0.15rem;
+                color: #00b38a;
+                background-color: #f5f5f5;
+                line-height: 0.3rem;
+                text-align: center;
+                border-radius: 0.15rem;
+            }
+            .list {
+                width: 100%;
+                height: 0.9rem;
+                display: flex;
+                border-top: 0.01rem solid #d3d3d3;
+                box-sizing: border-box;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .list .image {
+                width: 0.6rem;
+                height: 0.6rem;
+                margin: 0rem 0.23rem 0rem 0.26rem;
+            }
+            .list .image img {
+                width: 100%;
+                height: 100%;
+            }
+            .detail {
+                flex: 1;
+            }
+            .detail h2 {
+                font-size: 0.18rem;
+            }
+            .detail p:nth-of-type(1) {
+                margin-top: 0.02rem;
+                font-size: 0.14rem;
+                display: flex;
+                color: #6e6e6e;
+                justify-content: space-between;
+            }
+            .detail p:nth-of-type(1) span:nth-child(2) {
+                margin-right: 0.15rem;
+                color: #17b994;
+            }
+            .detail p:nth-child(3) {
+                margin-top: 0.04rem;
+                color: #aca9a9;
+                font-size: 0.12rem;
+            }
+
+            .toolbar {
+                border-top: 0.01rem solid #d3d3d3;
+                border-bottom: 0.01rem solid #d3d3d3;
+                width: 100%;
+                height: 0.45rem;
+                display: flex;
+                background-color: #f6f6f6;
+                position: fixed;
+                bottom: 0rem;
+            }
+            .toolbar div {
+                flex: 1;
+                text-align: center;
+                line-height: 0.45rem;
+                color: #929292;
+            }
+            .toolbar em {
+                font-size: 0.2rem !important;
+                position: relative;
+                top: 0.03rem;
+            }
+            .toolbar div:nth-child(1) {
+                background-color: #e7f3f0;
+                color: #17b994;
+            }
+            footer {
+                border-top: 0.01rem solid #d3d3d3;
+                width: 100%;
+                height: 1.65rem;
+                background: fafafa;
+                margin-bottom: 0.47rem;
+            }
+            footer .more {
+                width: 100%;
+                height: 0.52rem;
+                color: #333333;
+                line-height: 0.52rem;
+                text-align: center;
+            }
+            .right {
+                padding-top: 0.2rem;
+                font-size: 0.12rem;
+                text-align: center;
+            }
+            .right p {
+                margin-top: 0.06rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header>拉勾网</header>
+        <section class="login">
+            <span>10秒钟定制职位</span>
+            <a href="#">去登录</a>
+        </section>
+        <section class="list">
+            <div class="image">
+                <img src="./img/lagou1.jpg"/>
+            </div>
+            <div class="detail">
+                <h2>证大爱特</h2>
+                <p>
+                    <span>中级java开发工程师[上海]</span>
+                    <span>13k-20k</span>
+                </p>
+                <p>今天 11:16</p>
+            </div>
+        </section>
+        <section class="list">
+            <div class="image">
+                <img src="./img/lagou1.jpg"/>
+            </div>
+            <div class="detail">
+                <h2>证大爱特</h2>
+                <p>
+                    <span>中级java开发工程师[上海]</span>
+                    <span>13k-20k</span>
+                </p>
+                <p>今天 11:16</p>
+            </div>
+        </section>
+        <section class="list">
+            <div class="image">
+                <img src="./img/lagou1.jpg"/>
+            </div>
+            <div class="detail">
+                <h2>证大爱特</h2>
+                <p>
+                    <span>中级java开发工程师[上海]</span>
+                    <span>13k-20k</span>
+                </p>
+                <p>今天 11:16</p>
+            </div>
+        </section>
+        <section class="list">
+            <div class="image">
+                <img src="./img/lagou1.jpg"/>
+            </div>
+            <div class="detail">
+                <h2>证大爱特</h2>
+                <p>
+                    <span>中级java开发工程师[上海]</span>
+                    <span>13k-20k</span>
+                </p>
+                <p>今天 11:16</p>
+            </div>
+        </section>
+        <section class="list">
+            <div class="image">
+                <img src="./img/lagou1.jpg"/>
+            </div>
+            <div class="detail">
+                <h2>证大爱特</h2>
+                <p>
+                    <span>中级java开发工程师[上海]</span>
+                    <span>13k-20k</span>
+                </p>
+                <p>今天 11:16</p>
+            </div>
+        </section>
+        <section class="list">
+            <div class="image">
+                <img src="./img/lagou1.jpg"/>
+            </div>
+            <div class="detail">
+                <h2>证大爱特</h2>
+                <p>
+                    <span>中级java开发工程师[上海]</span>
+                    <span>13k-20k</span>
+                </p>
+                <p>今天 11:16</p>
+            </div>
+        </section>
+        <section class="list">
+            <div class="image">
+                <img src="./img/lagou1.jpg"/>
+            </div>
+            <div class="detail">
+                <h2>证大爱特</h2>
+                <p>
+                    <span>中级java开发工程师[上海]</span>
+                    <span>13k-20k</span>
+                </p>
+                <p>今天 11:16</p>
+            </div>
+        </section>
+        <section class="list">
+            <div class="image">
+                <img src="./img/lagou1.jpg"/>
+            </div>
+            <div class="detail">
+                <h2>证大爱特</h2>
+                <p>
+                    <span>中级java开发工程师[上海]</span>
+                    <span>13k-20k</span>
+                </p>
+                <p>今天 11:16</p>
+            </div>
+        </section>
+        <section class="list">
+            <div class="image">
+                <img src="./img/lagou1.jpg"/>
+            </div>
+            <div class="detail">
+                <h2>证大爱特</h2>
+                <p>
+                    <span>中级java开发工程师[上海]</span>
+                    <span>13k-20k</span>
+                </p>
+                <p>今天 11:16</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="more">
+                <a href="#">加载更多</a>
+            </div>
+            <div class="right">
+                <p>&copy;2015 lagou.com, all right reversed</p>
+                <p>
+                    <a href="#">移动版</a>.
+                    <a href="#">电脑版</a>
+                    <a href="#">回顶部</a>
+                </p>
+            </div>
+        </footer>
+        <section class="toolbar">
+            <div><em class="iconfont icon-home"></em>职位</div>
+            <div><em class="iconfont icon-sousuo-"></em>搜索</div>
+            <div><em class="iconfont icon-wode"></em>我的</div>
+        </section>
+    </body>
+</html>

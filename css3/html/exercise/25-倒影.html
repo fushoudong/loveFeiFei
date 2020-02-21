@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>倒影</title>
+        <style>
+            .mask {
+                width:300px;
+                height:300px;
+                margin: 10px auto;
+                -webkit-box-reflect: right 10px url(../../img3/love.png);
+            }
+            .linear-gradient {
+                width:300px;
+                height:300px;
+                margin: 10px auto;
+                -webkit-box-reflect: below 2px linear-gradient(rgba(255,0,0,0.1),rgba(255,255,255,1));
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div class="mask">
+            <img src="../../img3/girl.jpg" alt="">
+        </div>
+        <div class="linear-gradient">
+            <img src="../../img3/girl.jpg" alt="">
+        </div>
+    </body>
+</html>

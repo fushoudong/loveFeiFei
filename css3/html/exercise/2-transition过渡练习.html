@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>transition过渡练习</title>
+        <style>
+            * {
+                padding: 0px;
+                margin: 0px;
+                list-style: none;
+            }
+            div {
+                margin: 10px;
+                float: left;
+            }
+            hr {
+                width: 100px;
+                height: 10px;
+                background: lightseagreen;
+                transition: 1.5s;
+            }
+            hr:hover {
+                width: 200px;
+                cursor: pointer;
+            }
+            ul {
+                width: 360px;
+                height: 70px;
+                float: left;
+            }
+            ul::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            ul li {
+                float: left;
+                width: 60px;
+                height: 70px;
+                display: block;
+                transition: 0.5s;
+            }
+            li:nth-child(1) {
+                background: url(../../img/aNavBg.png) -5px -5px;
+            }
+            li:nth-child(2) {
+                background: url(../../img/aNavBg.png) -65px -5px;
+            }
+            li:nth-child(3) {
+                background: url(../../img/aNavBg.png) -125px -5px;
+            }
+            li:nth-child(4) {
+                background: url(../../img/aNavBg.png) -185px -5px;
+            }
+            li:nth-child(5) {
+                background: url(../../img/aNavBg.png) -245px -5px;
+            }
+            li:nth-child(6) {
+                background: url(../../img/aNavBg.png) -305px -5px;
+            }
+            li:nth-child(1):hover {
+                background: url(../../img/aNavBg.png) -5px -75px;
+                cursor: pointer;
+            }
+            li:nth-child(2):hover {
+                background: url(../../img/aNavBg.png) -65px -75px;
+                cursor: pointer;
+            }
+            li:nth-child(3):hover {
+                background: url(../../img/aNavBg.png) -125px -75px;
+                cursor: pointer;
+            }
+            li:nth-child(4):hover {
+                background: url(../../img/aNavBg.png) -185px -75px;
+                cursor: pointer;
+            }
+            li:nth-child(5):hover {
+                background: url(../../img/aNavBg.png) -245px -75px;
+                cursor: pointer;
+            }
+            li:nth-child(6):hover {
+                background: url(../../img/aNavBg.png) -305px -75px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <hr/>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </body>
+</html>

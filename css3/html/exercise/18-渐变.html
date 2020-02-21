@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>渐变</title>
+        <style>
+            div {
+                float: left;
+                width: 200px;
+                height: 200px;
+                margin-left: 20px;
+                margin-top: 10px;
+                color: white;
+                line-height: 200px;
+                text-align: center;
+            }
+            .div1 {
+                background: linear-gradient(red,blue);
+            }
+            .div2 {
+                background: linear-gradient(to right,red,blue);
+            }
+            .div3 {
+                background: linear-gradient(to right top,red,blue);
+            }
+            .div4 {
+                background: linear-gradient(red 25%,blue 75%);
+            }
+            .div5 {
+                background: linear-gradient(red 50%,blue 50%);
+            }
+            .div6 {
+                background: radial-gradient(red,blue);
+            }
+            .div7 {
+                background: radial-gradient(red 25%,green 50%,blue 75%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div1">默认渐变</div>
+        <div class="div2">右边渐变</div>
+        <div class="div3">右上渐变</div>
+        <div class="div4">设置起始</div>
+        <div class="div5">双颜色</div>
+        <div class="div6">径向渐变</div>
+        <div class="div7">多层径向渐变</div>
+    </body>
+</html>

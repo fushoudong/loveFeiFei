@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>em与rem</title>
+        <style>
+            html {
+                font-size: 10px;
+            }
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+            .out {
+                width: 300px;
+                height: 300px;
+                border: 1px solid gray;
+                display: grid;
+                font-size: 30px;
+                margin: 10px auto;
+                grid-template-columns: repeat(3 ,1fr);
+                grid-template-rows: repeat(3, 1fr);
+            }
+            .in {
+                width: 100px;
+                height: 100px;
+                background: red;
+                grid-area: 2/2/3/3;
+                border-left: 1em solid black;
+                border-right: 1rem solid green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="out">
+            <div class="in"></div>
+        </div>
+    </body>
+</html>

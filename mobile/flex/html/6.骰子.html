@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>骰子</title>
+        <style>
+            .box1, .box2, .box3, .box4, .box5, .box6 {
+                margin-top: 20px;
+            }
+            .box1 {
+                width: 100px;
+                height: 100px;
+                border-radius: 5px;
+                border: 1px solid black;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+            .box1 div, .box2 div, .box3 div{
+                width: 30px;
+                height: 30px;
+                border-radius: 30px;
+                background: black;
+            }
+            .box2 {
+                width: 100px;
+                height: 100px;
+                border-radius: 5px;
+                border: 1px solid black;
+                justify-content: space-between;
+                display: flex;
+            }
+            .box2 div:nth-child(2) {
+                align-self: flex-end;
+            }
+            .box3 {
+                width: 100px;
+                height: 100px;
+                border-radius: 5px;
+                border: 1px solid black;
+                justify-content: space-between;
+                display: flex;
+            }
+            .box3 div:nth-child(2) {
+                align-self: center;
+            }
+            .box3 div:nth-child(3) {
+                align-self: flex-end;
+            }
+            .box4, .box5,.box6{
+                width: 100px;
+                height: 100px;
+                border-radius: 5px;
+                border: 1px solid black;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                display: flex;
+            }
+            .box4 div, .box5 div, .box6 div {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .box4 div:nth-child(2), .box5 div:nth-child(3), .box6 div:nth-child(3) {
+                align-items: flex-end;
+            }
+            .box5 div:nth-child(2) {
+                justify-content: center;
+            }
+            .box4 div i, .box5 div i, .box6 div i{
+                width: 30px;
+                height: 30px;
+                border-radius: 30px;
+                background: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">
+            <div></div>
+        </div>
+        <div class="box2">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box3">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="box4">
+            <div>
+                <i></i>
+                <i></i>
+            </div>
+            <div>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+        <div class="box5">
+            <div>
+                <i></i>
+                <i></i>
+            </div>
+            <div>
+                <i></i>
+            </div>
+            <div>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+        <div class="box6">
+            <div>
+                <i></i>
+                <i></i>
+            </div>
+            <div>
+                <i></i>
+                <i></i>
+            </div>
+            <div>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+/*
+    多行注释，就是CSS的注释方式，会被编译出来
+ */
+.div2 {
+  width: 200px;
+  margin: auto;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  display: block;
+  margin: 0px;
+}
+ul li div {
+  width: 3px;
+}
+ul:hover {
+  color: red;
+}
+.box_2 {
+  width: 200rem;
+  color: #444444;
+  font: 15.33333333px;
+  margin: 7px / 2;
+  height: 10 px;
+}
+.box6 {
+  display: block;
+  display: inline;
+}
+.line,
+.box7,
+.box8 {
+  display: inline-block;
+}
+.box10 {
+  background: url(../css3/img/1.png), url(../css3/img/2.png);
+}
+.box11 {
+  transform: scale(12) rotate(30deg);
+}
+.box12 {
+  width: 100px;
+}
+@media all and (min-width: 600px) {
+  .box12 {
+    width: 500px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .box12 {
+    width: 1000px;
+  }
+}
+.box2 {
+  color: blue;
+}
+.box-if {
+  width: 105px;
+}
+.box-4 {
+  width: 104px;
+}
+.box-3 {
+  width: 103px;
+}
+.box-2 {
+  width: 102px;
+}
+.box-1 {
+  width: 101px;
+}
+.box-0 {
+  width: 100px;
+}

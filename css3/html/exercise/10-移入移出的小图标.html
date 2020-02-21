@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>移入移出小图标</title>
+        <style>
+            * {
+                padding: 0px;
+                height: 0px;
+                list-style: none;
+            }
+            ul {
+                margin: 30px auto;
+                width: 150px;
+                height: 50px;
+            }
+            li {
+                float: left;
+                display: block;
+                height: 50px;
+                width: 50px;
+                position: relative;
+                cursor: pointer;
+                overflow: hidden;
+            }
+            img {
+                position: absolute;
+                width: 22px;
+                height: 22px;
+                left: 14px;
+                top: 14px;
+            }
+            li:hover img {
+                animation: up 1s;
+            }
+            @keyframes up {
+                0% {transform: translateY(0px); opacity: 1;}
+                50% {transform: translateY(-30px); opacity: 0;}
+                51% {transform: translateY(30px); opacity: 0;}
+                100% {transform: translateX(0px); opacity: 1;}
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <img src="../../img/1.png"/>
+            </li>
+            <li>
+                <img src="../../img/2.png"/>
+            </li>
+            <li>
+                <img src="../../img/3.png"/>
+            </li>
+        </ul>
+    </body>
+</html>

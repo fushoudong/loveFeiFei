@@ -1,0 +1,18 @@
+.side {
+    position: fixed;
+    top: 600px;
+    left: calc(50% + 900px);
+    width: fit-content;
+}
+.bar {
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    margin-top: 3px;
+    text-align: center;
+}
+.bar i{
+    height: 30px;
+    font-size: 20px !important;
+    line-height: 30px;
+}

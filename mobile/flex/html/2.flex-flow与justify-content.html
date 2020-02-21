@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>flex-flow与justify-content</title>
+    </head>
+    <style>
+        .parent {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            margin: 100px auto;
+            display: flex;
+            text-align: center;
+            line-height: 50px;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            background: red;
+        }
+    </style>
+    <body>
+        <div class="parent">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+        </div>
+    </body>
+</html>

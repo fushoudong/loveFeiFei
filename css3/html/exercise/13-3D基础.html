@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3D基础</title>
+        <style>
+            .out {
+                width: 300px;
+                height: 300px;
+                border: 1px black solid;
+                perspective: 300px;
+                margin: 100px auto;
+                cursor: pointer;
+            }
+            .in {
+                width: 100px;
+                height: 100px;
+                background: red;
+                margin: 100px;
+                transition: 2s;
+            }
+            .out:hover .in {
+                transform: rotateY(180deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="out">
+            <div class="in">
+
+            </div>
+        </div>
+    </body>
+</html>

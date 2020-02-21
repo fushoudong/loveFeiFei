@@ -105,6 +105,8 @@
     ruby  、 rt 这样一个组合
     ruby：包含需要添加拼音的中文字符
     rt：需要添加的拼音
+    eg:
+        <ruby>斐<rt>fěi</rt></ruby>
     文字反向：
       HTML实现：
         bdo：<bdo direction='ltr|rtl'>
@@ -199,10 +201,10 @@
     斜线分类 : border / rotate
     列分组 : colgroup  / col(为对应的列设置样式)
     colgroup:col
-        <colspan>
+        <colgroup>
             <col span='2'>//可对前两列设置样式
             <col span='3'>//可对后两列设置样式
-        </colspan>
+        </colgroup>
 ```
 
 ### 15. 表单扩展学习？

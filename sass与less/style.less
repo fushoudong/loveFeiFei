@@ -1,0 +1,88 @@
+//单行注释：不会被保存出来
+/*
+    多行注释，就是CSS的注释方式，会被编译出来
+ */
+
+//变量，插值，作用域
+@number: 3px;
+@key: margin;
+@i :2;
+.div@{i}{
+    width: @number;
+    @number :200px;
+    @{key}: auto;
+}
+
+//选择器嵌套，伪类嵌套，属性嵌套(Sass)
+ul {
+    list-style: none;
+    li {
+        display: block;
+        margin: 0px;
+        div {
+            width: @number;
+        }
+    }
+    &:hover {
+        color: red;
+    }
+}
+//运算，单位，转义，颜色
+@param: 20rem;
+
+.box_@{i}{
+    width: 100rem * @i;
+    color: #222222 * @i;
+    font: (23px / 1.5);
+    @{key}: ~"7px / 2";
+    height: round(9.8)px;
+}
+
+//命名空间
+.show() {
+    display: inline;
+}
+.box6 {
+    display: block;
+    .show();
+}
+.line {display:inline-block}
+.box7 {&:extend(.line);}
+.box8 {&:extend(.line);}
+
+.box10 {background+: url(../css3/img/1.png);background+: url(../css3/img/2.png);}
+.box11 {
+    transform+_: scale(12);
+    transform+_: rotate(30deg);
+}
+.box12 {
+    width: 100px;
+    @media all and(min-width:600px){
+        width: 500px;
+    }
+    @media all and(min-width:1200px){
+        width: 1000px;
+    }
+}
+.color(@color){
+    color: @color;
+}
+.box2 {
+    .color(blue);
+}
+@if: 5;
+.get(@cn) when (@cn > 1){
+    width: 100px + @if;
+}
+.box-if {
+    .get(@if)
+}
+
+@count : 0;
+.get2(@cn) when (@cn < 5){
+    .get2(@cn+1);
+    .box-@{cn}{
+        width: 100px + @cn;
+    }
+}
+.get2(@count);

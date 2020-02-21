@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>transform位移与缩放</title>
+        <style>
+            .div1 {
+                width: 300px;
+                height: 300px;
+                border: 1px solid black;
+                box-sizing: border-box;
+                cursor: pointer;
+            }
+            .div2 {
+                width: 100px;
+                height: 100px;
+                background: red;
+                transition: 1s;
+                transition-timing-function: ease-in-out;
+                transform-origin: 0% 0%;
+            }
+            .div1:hover .div2 {
+                /* transform: translateX(100px); */
+                transform: scale(2);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="div1">
+            <div class="div2">
+
+            </div>
+        </div>
+    </body>
+</html>

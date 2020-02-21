@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel='icon' type="image/x-icon" href="http://www.mobiletrain.org/favicon.ico"/>
+        <title>HTML5</title>
+        <style>
+            * {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            div {
+                float: left;
+                padding: 10px;
+                margin-left: 10px;
+                margin-top: 10px;
+                border: 1px solid black;
+            }
+            abbr {
+                cursor: pointer;
+            }
+            code {
+                margin-left: -100px;
+            }
+            table {
+                border-collapse: collapse;
+                empty-cells: hide;
+                text-align:center;
+            }
+            th {
+                height: 60px;
+            }
+            th div{
+                border-top: #FF0 60px solid;
+                border-left:#00f 100px solid;
+                padding: 0px;
+                margin: 0px;
+                position: relative;
+            }
+            th div em {
+                font-style: normal;
+                position: absolute;
+                top: -50px;
+                left: -45px;
+            }
+            th div span {
+                font-style: normal;
+                position: absolute;
+                top: -23px;
+                left: -80px;
+            }
+            .div1 {
+                width:300px;
+                height: 300px;
+                border:black solid 1px;
+                box-sizing: border-box;
+            }
+            .div2 {
+                width: 100px;
+                height: 100px;
+                background: red;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>多媒体:</p>
+            <audio src="../../img/johann_sebastian_bach_air.mp3" controls autoplay loop/>
+            <div>
+                 <video src="../../img/Intermission-Walk-in_512kb.mp4" controls autoplay/>
+            </div>
+           
+        </div>
+        <div>
+            <p>引用标签</p>
+            <blockquote>这是引用大写段落</blockquote>
+            <q>这是引用小写段落</q>
+            <abbr title="my Love">SYF</abbr>
+            <address>地址</address>
+            <cite>引用著作</cite>
+        </div>
+        <div>
+            <p>代码</p>
+            <pre>
+                <code>&lt;p&gt;我喜欢斐斐&lt;/p&gt;</code>
+            </pre>
+        </div>
+        <div>
+            <p>usemap</p>
+            <img src="../../img/jj.jpeg" alt="JJ" usemap="#map" width="200" height="100">
+            <map name="map">
+                <area shape="rect" coords="10,10,110,100" href="../iframe.html">
+            </map>
+        </div>
+        <div>
+            <p>embed</p>
+            <embed src="../../img/flash.swf" >
+            <!-- <object>
+                <param value="../../img/flash.swf" name="pic"/>
+            </object> -->
+        </div>
+        <div>
+            <p>文字注解</p>
+            <p>
+               我爱<ruby>斐<rt>fěi</rt></ruby>斐
+            </p>
+        </div>
+        <div>
+            <p>语义化标签</p>
+            <figure>
+                <img src="../../img/jj.jpeg" alt="" width="300" height="150" />
+                <figcaption>将故事写成我们</figcaption>
+            </figure>
+        </div>
+        <div>
+            <input type='text' list='data'/>
+            <datalist id="data">
+                <option>data1</option>
+                <option>data2</option>
+                <option>data3</option>
+                <option>data4</option>
+            </datalist><br>
+            <progress max="10" min='1' value="7"></progress><br>
+            <meter max="100" min='10' value="89"></meter>
+            <p>这里是<mark>标记处</mark></p>
+            <details>
+                <summary>
+                    HTML
+                </summary>
+                超文本标记语言
+            </details>
+        </div>
+        <div>
+            <p>表格</p>
+            <table border="1">
+                <caption>表格</caption>
+                <colgroup>
+                    <col span="2" style='background: #f00;'/>
+                    <col span='2' style='background: #00f;'/>
+                </colgroup>
+                <tr>
+                    <th width='100'>
+                        <div>
+                            <em>信息</em>
+                            <span>学号</span>
+                        </div>
+                    </th>
+                    <th width='80'>姓名</th>
+                    <th width='80'>数学</th>
+                    <th width='80'>英语</th>
+                    <th width='80'>综合</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td align='center'>李四</td>
+                    <td align='center'>98</td>
+                    <td align='center'>92</td>
+                    <td align='center'>97</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td align='center'>王五</td>
+                    <td align='center'>98</td>
+                    <td align='center'>92</td>
+                    <td align='center'>97</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td align='center'>张三</td>
+                    <td align='center'>98</td>
+                    <td align='center'>92</td>
+                    <td align='center'>97</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <p>BEC规范</p>
+            <div class="div1">
+                <div class="div2"></div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+//单行注释
+/*多行注释*/
+$number: 3px;
+$key: margin;
+$i :2;
+.div#{$i}{
+    width: $number;
+    $number: 200px;
+    #{$key}: auto;
+}
+
+ul {
+    list-style: none;
+    li {
+        display: block;
+        margin: 0px;
+        div {
+            width: $number;
+        }
+    }
+    &:hover {
+        color: red;
+        font: {
+            weight: bold;
+            size: 30px;
+            family: '宋体';
+        }
+    }
+}
+
+$param: 20px;
+
+.box_#{$i}{
+    width: 100px * $i;
+    color: #22FF82 * $i;
+    font: 23px / 2;
+    margin:  23px / 2;
+    height: random() px;
+}
+
+//自定义函数
+@function sum($a,$b){
+    @return $a + $b;
+}
+
+.size {
+    width: sum(12, 13)px;
+}
+
+//混入
+@mixin show($color) {
+    display: inline;
+    color: $color;
+}
+.box11 {
+    @include show(blue);
+}
+.line {display: inline;}
+.box7 {@extend .line;}
+.box8 {@extend .line;}
+$background:(a: url(1),b: url(2));
+.box10 {
+    background: map-values($background);
+}
+$transform: (a: scale(2),b: rotate(30deg));
+.box11 {
+    transform: zip(map-values($transform)...);
+}
+.box12 {
+    width: 100px;
+    @media all and(min-width:600px){
+        width: 500px;
+    }
+    @media all and(min-width:1200px){
+        width: 1000px;
+    }
+}
+
+$if :3px;
+.box {
+    @if($if >3){
+        width: 100px + $if;
+    }
+    @else {
+        width: 100px - $if;
+    }
+}
+
+@for $if from 0 to 5 {
+    .box11_#{$if} {
+        width: 100px+$if;
+    }
+}
+
