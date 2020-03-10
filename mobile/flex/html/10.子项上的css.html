@@ -12,6 +12,7 @@
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-template-rows: repeat(3,1fr);
+                box-sizing: border-box;
             }
             .box div{
                 background: red;
@@ -22,9 +23,10 @@
                 grid-row-end: 4; */
                 /* grid-column: 2/4;
                 grid-row: 2/4; */
-                grid-area: 2/3/3/4;
+                grid-area: 3/2/4/3;
                 justify-self: end;
                 align-self: center;
+                border: 1px solid gray;
             }
         </style>
     </head>

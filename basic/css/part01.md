@@ -253,7 +253,7 @@ eg:(复合写法通过空格实现)
     相邻  M + N { }  当前M下面相邻的N标签
 ```
 7. 属性选择器
-```
+``` 
     M[attr] {}    
     = : 完全匹配(eg:div[class]:适用于所有带class的div标签)
     *= : 部分匹配(eg:div[class*='ha']:适用于所有class包含ha的div标签)

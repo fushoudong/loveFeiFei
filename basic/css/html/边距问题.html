@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>边距问题</title>
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                
+            }
+            .out {
+                width: 100px;
+                height: auto;
+                overflow: hidden;
+            }
+            .top {
+                margin-bottom: 30px;
+                background: red;
+            }
+            .bottom {
+                margin-top: 30px;
+                background: red;
+            }
+            .radius {
+                margin-top: 30px;
+                width: 100px;
+                height: 50px;
+                border: 1px red solid;
+                background: #F9F;
+                border-radius: 100px 100px 0 0;
+                filter: blur(10px);
+                cursor: crosshair;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="out">
+            <div class="top"></div>
+        </div>
+        <div class="out">
+            <div class="bottom"></div>
+        </div>
+        <div class="radius"></div>
+    </body>
+</html>

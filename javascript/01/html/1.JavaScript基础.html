@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>使用js的方式</title>
+        <script>
+            /*
+                1. 内部使用
+                2. 外部导入
+                3. 行内使用(不推荐)
+            */
+           document.write('内部使用');
+        </script>
+        <script src="../js/js.js"></script>
+    </head>
+    <body>
+        <button onclick="alert('行内使用!')">点击</button>
+        <a href="javascript:alert('点击了链接的行内元素')">link</a>
+    </body>
+</html>

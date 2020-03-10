@@ -1,0 +1,12 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+:root {
+    --lightGray: #d3d3d3;
+    --red: #FF0000;
+}
+.box {
+    color: var(--lightGray);
+    background: var(--red);
+}

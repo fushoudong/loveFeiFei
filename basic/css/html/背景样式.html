@@ -5,21 +5,34 @@
         <title>背景样式</title>
         <style>
             div{
-                background-color: aqua;
-                width: 800px;
-                height: 800px;
-                background-image: url(../../image/story.jpg);
-                background-position: left bottom;
-                background-attachment: scroll;
-                background-repeat: no-repeat;
+                width: 100%;
+                height: 900px;
                 border: #ff0000 3px double;
             }
-
+            div:nth-of-type(1) {
+                background: url('../../image/1.jpg') fixed no-repeat;
+                background-size: cover;
+            }
+            div:nth-of-type(2) {
+                background: url('../../image/2.jpg') fixed no-repeat;
+                background-size: cover;
+            }
+            div:nth-of-type(3) {
+                background: url('../../image/3.jpg') fixed no-repeat;
+                background-size: cover;
+            }
         </style>
     </head>
     <body>
         <div>
-            <!-- 这一生原本一个人 -->
+            这一生原本一个人
+            <img src="" alt="">
+        </div>
+        <div>
+            你坚持厮守了我们
+        </div>
+        <div>
+            却想小手
         </div>
     </body>
 </html>

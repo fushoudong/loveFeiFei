@@ -1,0 +1,111 @@
+//单行注释
+/*
+    less练习
+*/
+@import './import.less';
+/* 变量、插值、作用域 */
+@width: 100px;
+@key: height;
+@n: 2;
+
+.div_@{n} {
+    @width: 200px;
+    width: @width;
+    @{key}: @width;
+}
+/* 选择器嵌套，伪类嵌套，属性嵌套 */
+ul {
+    list-style: none;
+    li {
+        width: 100px;
+        height: 100px;
+        display: block;
+    }
+    &:hover {
+        color: red;
+    }
+}
+/* 运算，单位，转义，颜色 */
+@count: 120px;
+.div1 {
+    width:  @count + 100em;
+    height: 100em + @count;
+    margin: @count / 20;
+    font: (@count / 20);
+    color: #234567 * @n;
+}
+/* 函数 */
+.div2 {
+    width: percentage(0.2)px;
+}
+.sum(@a,@b) {
+    font-size:  @a + @b;
+}
+.color(@color) {
+    color: @color;
+}
+.div3 {
+    .sum(1px,2px);
+    .color(green);
+}
+/* 混入 */
+.div_mixin() {
+    width: 100px;
+}
+.div4 {
+    .div_mixin();
+}
+/* 命名空间 */
+#nm {
+    .div4 {width: 200px;}
+}
+.div5 {
+    #nm.div4;
+}
+/* 继承 */
+.line {display: inline;}
+.div6 {
+    &:extend(.line);
+}
+.div7 {
+    &:extend(.line);
+}
+/* 合并 */
+.div8 {
+    background+: url(a.png);
+    background+: url(b.png);
+}
+.div9 {
+    transform+_: scale(12);
+    transform+_: translate(12px,0px);
+}
+/* 媒体查询 */
+.div10 {
+    width: 100px;
+    @media all and (min-width: 700px){
+        width: 600px;
+    }
+    @media all and (min-width: 1400px){
+        width: 1300px;
+    }
+}
+/* 条件 */
+@if: 4;
+.setWidth(@cn) when (@cn > 4){
+    width: @cn - 1px;
+}
+.setWidth(@cn) when (@cn <= 4){
+    width: @cn + 1px;
+}
+.box1 {
+    .setWidth(@if)
+}
+/* 循环 */
+@number: 0;
+.setWhile(@cn) when (@cn < 10){
+    .setWhile(@cn + 1);
+    .box_@{cn}{
+        width: 100px + 10 * @cn;
+    }
+}
+.setWhile(@number);

@@ -1,0 +1,114 @@
+/*
+    less练习
+*/
+* {
+  padding: 0px;
+  margin: 0px;
+  width: auto;
+}
+/* 变量、插值、作用域 */
+.div_2 {
+  width: 200px;
+  height: 200px;
+}
+/* 选择器嵌套，伪类嵌套，属性嵌套 */
+ul {
+  list-style: none;
+}
+ul li {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+ul:hover {
+  color: red;
+}
+/* 运算，单位，转义，颜色 */
+.div1 {
+  width: 220px;
+  height: 220em;
+  margin: 6px;
+  font: 6px;
+  color: #468ace;
+}
+/* 函数 */
+.div2 {
+  width: 20% px;
+}
+.div3 {
+  font-size: 3px;
+  color: green;
+}
+/* 混入 */
+.div4 {
+  width: 100px;
+}
+/* 命名空间 */
+#nm .div4 {
+  width: 200px;
+}
+.div5 {
+  width: 200px;
+}
+/* 继承 */
+.line,
+.div6,
+.div7 {
+  display: inline;
+}
+/* 合并 */
+.div8 {
+  background: url(a.png), url(b.png);
+}
+.div9 {
+  transform: scale(12) translate(12px, 0px);
+}
+/* 媒体查询 */
+.div10 {
+  width: 100px;
+}
+@media all and (min-width: 700px) {
+  .div10 {
+    width: 600px;
+  }
+}
+@media all and (min-width: 1400px) {
+  .div10 {
+    width: 1300px;
+  }
+}
+/* 条件 */
+.box1 {
+  width: 5px;
+}
+/* 循环 */
+.box_9 {
+  width: 190px;
+}
+.box_8 {
+  width: 180px;
+}
+.box_7 {
+  width: 170px;
+}
+.box_6 {
+  width: 160px;
+}
+.box_5 {
+  width: 150px;
+}
+.box_4 {
+  width: 140px;
+}
+.box_3 {
+  width: 130px;
+}
+.box_2 {
+  width: 120px;
+}
+.box_1 {
+  width: 110px;
+}
+.box_0 {
+  width: 100px;
+}

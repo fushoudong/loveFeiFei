@@ -1,0 +1,88 @@
+@import './import.scss';
+//单行注释
+/* 多行注释 */
+$width: 100px;
+$key: height;
+$n: 2;
+.box_#{$n}{
+    $width: 200px;
+    width: $width;
+    #{$key}: $width;
+    $key: margin-top;
+}
+ul {
+    list-style: none;
+    li{
+        width: 100px;
+        div{
+            float: left;
+        }
+    }
+    &:hover {
+        color: red;
+        font: {
+            weight: bold;
+            style: italic;
+        }
+    }
+}
+$count: 20;
+.box2 {
+    width: 100px + $count;
+    height: $count + 100em;
+    color: #189898 * 2;
+    margin-top: (10px/2);
+}
+@function sum($a,$b){
+    @return ($a + $b);
+}
+.box3 {
+    width: random() px;
+    height: sum(12px,100px);
+}
+@mixin d{
+    display: inline;
+}
+.box4 {
+    @include d();
+}
+.block {
+    display: block;
+}
+.box5 {
+    @extend .block;
+}
+.box6 {
+    @extend .block;
+}
+$background: (a:url(a.png),b:url(b.png));
+$transform: (a:scale(1.2),b:rotate(30deg));
+
+.box7 {
+    background: map-values($background);
+    transform: zip(map-values($transform)...);
+}
+.box8 {
+    width: 100px;
+    @media all and (min-width: 700px){
+        width: 600px;
+    }
+    @media all and (min-width: 1400px){
+        width: 1300px;
+    }
+}
+$judge: 10px;
+.box9 {
+    @if ($judge > 10) {
+        width: 100px - $judge;
+    }
+    @else {
+        width: 100px + $judge;
+    }
+} 
+$count: 10 ;
+@for $cn from 0 to $count {
+    .box#{$cn}{
+        width: 10 * $cn px;
+    }
+}

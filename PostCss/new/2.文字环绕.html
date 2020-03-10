@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>文字环绕</title>
+        <style>
+            .out {
+                width: 300px;
+                height: 300px;
+                border: 1px solid black;
+                margin: 30px auto;
+                overflow: auto;
+            }
+            .in {
+                width: 100px;
+                height: 100px;
+                border: 10px black solid;
+                padding: 10px;
+                /* border-radius: 50%; */
+                background: gray;
+                margin: 10px;
+                float: left;
+                shape-outside: polygon(0 0,0 100px,100px 100px);
+                clip-path: polygon(0 0,0 100px,100px 100px);
+                shape-margin: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="out">
+            <div class="in"></div>
+            CSS Shapes布局可以实现不规则的文字环绕效果，需要和浮动配合使用。
+            CSS Shapes布局可以实现不规则的文字环绕效果，需要和浮动配合使用。
+            CSS Shapes布局可以实现不规则的文字环绕效果，需要和浮动配合使用。
+            CSS Shapes布局可以实现不规则的文字环绕效果，需要和浮动配合使用。
+            CSS Shapes布局可以实现不规则的文字环绕效果，需要和浮动配合使用。
+            CSS Shapes布局可以实现不规则的文字环绕效果，需要和浮动配合使用。
+        </div>
+    </body>
+</html>
